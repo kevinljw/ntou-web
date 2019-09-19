@@ -1,0 +1,351 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(118deg, #929afd, #2dbdfd);
+
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.id_footer {
+    /* 設定footer的高度 */
+    height: 6.17%;
+    box-sizing: border-box;
+    /* 設定footer絕對位置在底部 */
+    position: fixed;
+    bottom: 0;
+    /* 展開footer寬度 */
+    width: 100%;
+    background-color: #33227c;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+}
+.id_footer .footer-text {
+  width: 100%;
+  font-family: Arial;
+  font-size: 1vmin;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+}
+.NTOU-GLORIA {
+  width: 13.59%;
+  height: 13.6%;
+  font-family: Helvetica;
+  font-size: 5vmin;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  position:absolute;
+  left:3.3%;
+  top:19.4%;
+}
+.container-1{
+  position: relative;
+  top: 27.27%;
+  left: 48%;
+  width: 6.9%;
+  height: 13.9%;
+}
+.container-2{
+  position: absolute;
+  top: 56.98%;
+  left: 22.2%;
+  width: 6.9%;
+  height: 13.9%;
+}
+.container-3{
+  position: absolute;
+  top: 14.7%;
+  left: 71.5%;
+  width: 6.9%;
+  height: 13.9%;
+}
+.container-4{
+  position: absolute;
+  top: 65.38%;
+  left: 83.54%;
+  width: 6.9%;
+  height: 13.9%;
+}
+.category-size{
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #33227c;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  font-family: Arial;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+.sidenav .closebtn {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.sidenav .navcontainer{
+  position: absolute;
+  top: 18.6%;
+  left: 16.54%;
+}
+
+@media screen and (max-height: 450px) {
+  
+  .sidenav a {font-size: 18px;}
+}
+
+.menu{
+  width: 3.28%;
+  height: 5.83%;
+  position: absolute;
+  top: 6.6%;
+  left: 3.3%;
+  color: #ffffff;
+}
+
+.close{
+  width: 12.99%;
+  height: 4.9%;
+  top: 6.1%;
+  left: 15.54%;
+  position: absolute;
+}
+
+.content {
+  padding: 2vmin;
+  height: 27.5%;
+  width: 23.59%;
+  position: absolute;
+  left: 22.91%;
+  top: 16.85%;
+  display: none;
+  overflow: hidden;
+  background-color: #33227c;
+}
+
+.content-image{
+  width: 20vmin;
+  padding-right: 5px;
+  float: left;
+
+}
+
+
+/* detail */
+.hero-image-detail {
+  background-image: linear-gradient(118deg, #929afd, #2dbdfd);
+
+  height: 1080px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.vendor-title {
+  position: absolute;
+  top: 169.4px;
+  left: 188px;
+  width: 230px;
+  height: 40px;
+  font-family: Arial;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #33227c;
+}
+
+.vendor-equipment{
+  position: absolute;
+  top: 223.4px; 
+  left: 188px;
+  width: 424px;
+  height: 74px;
+  font-family: Arial;
+  font-size: 53px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.72;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.Aquaculture-equipment {
+  position: absolute;
+  top: 299.4px;
+  left:188px;
+  width: 313px;
+  height: 31px;
+  font-family: Arial;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.ae-detail{
+  position: absolute;
+  top:  483.6px;
+  left: 188px;
+  width: 529px;
+  height: 199px;
+  font-family: Arial;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.middle-image {
+  width: 100%;
+  height: 1065px;
+
+}
+
+.detail-foot{
+  width: 100%;
+  height: 722px;
+  background-image: linear-gradient(108deg, #939bff, #57affd 31%, #43b6fd 72%, #2dbdfd);
+
+}
+
+.detail-foot-text{
+  position: relative;
+  top: 296.6px;
+  left: 194px;
+  width: 972px;
+  height: 201px;
+  font-family: Arial;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* 容器的高 寬 相對定位 超出隱藏*/ 
+#container{
+width:364px;
+height:400px;
+margin: 0 auto;
+position:relative;
+left: 1316px;
+overflow:hidden; 
+float: left;
+
+}
+/************************ 內容的高 寬 絕對定位 偏移************************/
+#lis{
+width: 107px;
+height: 266px;
+position:absolute;
+left:0;
+}
+#lis a{
+float:left;
+}
+/* 清除img浮動,正常撐開a高與高 */
+#lis a:after{
+content:"";
+display:block;
+clear:both;
+}
+/* 清除IMG之間邊距 無縫拼接 */
+#list img{
+float:left;
+}
+/******* 一排小圓點************/
+#tips{
+margin:0;
+padding:0;
+
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translate(-50%);
+list-style:none;
+}
+#tips li{
+width:18px;
+height: 18px;
+border-radius:50%;
+border: solid 2px #3458a9;
+float:left;
+margin-left:5px;
+}
+/* 切換到相應的圖片 相應小圓點的顏色 */
+#tips .active{
+background-color: #3458a9;
+}
+/**** 左右按鈕 絕對定位 大小 去下劃線****************/ 
+#btn a{
+position:absolute;
+top:50%;
+margin-top:-100px;
+font-size:100px;
+text-decoration: none;
+}
+#btn #next{
+position:absolute;
+right:0%;
+}

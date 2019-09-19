@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<div class="hero-image-detail">
+
+  <div id="mySidenav" class="sidenav">
+    <div class="close">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="img/close.png" style='width: 100%; height: 100%;'></a>
+    </div>
+    <div class="navcontainer">
+      <a href="#">Home</a>
+      <!--a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a-->
+    </div>
+  </div>
+  <div class="menu">
+    <a onclick="openNav()" href="javascript:void(0)"><img src="img/menu.png" style='width: 100%; height: 100%;'></a>
+  </div>
+
+  <div class="vendor-title">
+    泰義 TAI-YIH SUN
+  </div>
+
+  <div class="vendor-equipment">
+    水產養殖機械設備
+  </div>
+  
+  <div class="Aquaculture-equipment">
+    Aquaculture equipment
+  </div>
+
+  <div class="ae-detail">
+    泰義工業股份有限公司成立於1979年，經二十多年成長，由專業生產水產用減速機、馬達進而陸續研發生產工業用減速機、馬達、鼓風機、魯式鼓風機、泵浦等高品質高效率之工業產品。
+  </div>
+   
+
+  
+</div>
+
+<div class="middle-image">
+  
+</div>
+
+<div class="detail-foot">
+  <div class="detail-foot-text">
+    水產養殖機械設備-養殖用水車、增氧機、給氧機、多葉輪、減速機(渦輪減速機、傘齒輪減速機、齒輪減速機)、工業用馬達(單相/三相交流電動馬達、立式工業馬達、臥式工業馬達、振動馬達)、鼓風機(環形(型)鼓風機、透浦式鼓風機)魯式鼓風機、魯氐鼓風機、歸港鼓風機、幫浦(泵浦)、大排水量幫浦、一般用幫浦、污泥(污水)用幫浦、工業用幫浦、減速機、馬達、工業用減速機、馬達、鼓風機、魯式鼓風機、泵浦。
+
+  </div>
+
+  <div id="container">
+<div id="lis">
+<a href="#"><img src="img/" alt=""></a>
+<a href="#"><img src="img/" alt=""></a>
+<a href="#"><img src="img/" alt=""></a>
+<a href="#"><img src="img/" alt=""></a>
+<a href="#"><img src="img/B5.jpg" alt=""></a>
+</div>
+<!-- 圖片下面的那一排小圓點 到時候用JS動態輸出-->
+<ul id="tips">
+<li class="active"></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<!-- 左右按鈕 -->
+<div id="btn">
+<a href="#" id="up"><img src="img/arrow_left.png"></a>
+<a href="#" id="next"><img src="img/arrow_right.png"></a>
+</div>
+</div>
+
+</div>
+<footer class="id_footer">
+    <div class="footer-text">
+        海洋大學國際產學聯盟   聯絡人：高淑雲  電話：02-24622192#2297  E-Mail：gloria@mail.ntou.edu.tw
+    </div>
+</footer> <!-- /id_footer -->
+
+<script>
+var next=document.getElementById("next");//查詢一個叫next id;
+var up=document.getElementById("up");//查詢一個叫up id;
+var lis=document.getElementById("lis");//查詢一個叫lis id;
+var imgCount=lis.getElementsByTagName("img");//查詢lis所有圖片;
+var countMove=imgCount.length*-800;//定義變數用儲存偏移的總值;
+var container=document.getElementById("container");//獲取整個輪播圖區域
+var ul=document.getElementById("tips");//查詢一個叫tips id;
+var list=ul.getElementsByTagName("li");//查詢ul全部圓點
+var timer;
+var index=0;//list下標 從0開始！
+console.log(lis.width);
+var move=0;//定義變數用儲存偏移的值;
+//設定next下一張點選事件
+2.
+next.onclick=function(){
+move-=800;//每點選一次偏移-800PX; 第一張圖後style.left都為負值。
+index =1; 
+if(move===countMove){//如果偏移（move）等於countMove(4000),就move為0（0是第一張）
+move=0;
+index=0;
+}
+lis.style.left=move + "px";//設定向偏移left:move
+circle();//切換相對應圓點
+}
+//設定up上一張點選事件
+up.onclick=function(){
+index-=1;
+if(move===0){ //如果偏移（move）等於0,就move為countMove(4000);
+move=countMove;
+index=list.length-1;
+}
+move =800;
+lis.style.left=move + "px";//設定向偏移left:move
+circle();//切換相對應圓點
+}
+//設定輪播事件
+function play(){
+timer=setInterval(function(){ //內建定時器多次執行
+next.onclick();//每1.5秒執行下一張事件！！
+},1500)
+}
+play();//載入JS自動輪播！
+//設定暫停輪播事件
+function stop(){
+clearInterval(timer);//移除定時器
+}
+container.onmouseout=play;//當滑鼠移出輪播圖區域執行自動輪播事件
+container.onmouseover=stop;//當滑鼠移入輪播圖區域執行暫停輪播事件
+//設定圓點和圖片同步切換的事件
+function circle(){
+for(var i=0; list.length>i;i  ){//for迴圈語句 迴圈所有圓點
+if(list[i].className=="active"){ //if條件語句 如果其中一個圓點的Class等於active
+list[i].className="";          //其他圓點就是Class設定為空
+}
+list[index].className="active";//list下標為index 設定Calss為cative;
+}
+}
+for(var i=0; list.length>i;i  ){ //for迴圈語句 迴圈所有圓點
+(function(i){  //閉包
+list[i].onclick=function(){ //圓點點選事件
+lis.style.left=i*-800  "px";//設定lis偏移的值
+index=i;
+circle();
+}
+})(i);    //傳入I
+}
+</script>
+</body>
+</html>
+
