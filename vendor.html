@@ -86,11 +86,12 @@
 <script>
 console.log(12345);
 var xhr = new XMLHttpRequest();
-xhr.open('post','data/' + getValue('vendor') + '.json',true);
-console.log(getValue('vendor'));
-console.log('12345678')
-xhr.send(null);
+xhr.open('GET','gloria-ntou.ml/data/' + getValue('vendor') + '.json',true);
+console.log(xhr.responseText)
+xhr.send();
+console.log(xhr.responseText)
 xhr.onload = function(){
+
     var datastr = JSON.parse(xhr.responseText);
     var vendor_title = document.querySelector('.vendor-title');
     var vendor_equipment = document.querySelector('.vendor-equipment');
