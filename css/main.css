@@ -220,7 +220,7 @@ body, html {
   color: #ffffff;
 }
 
-.Aquaculture-equipment {
+.vendor-equipment-eng {
   position: absolute;
   top: 299.4px;
   left:188px;
@@ -237,7 +237,7 @@ body, html {
   color: #ffffff;
 }
 
-.ae-detail{
+.tech-intro{
   position: absolute;
   top:  483.6px;
   left: 188px;
@@ -266,7 +266,7 @@ body, html {
 
 }
 
-.detail-foot-text{
+.tech-application{
   position: relative;
   top: 296.6px;
   left: 194px;
