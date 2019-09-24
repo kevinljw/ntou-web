@@ -110,6 +110,7 @@ xhr.onload = function(){
       carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
     }
     vendor_title.innerHTML = datastr.vendor_title;
+    console.log('<img src="data/' + datastr.vendor_tech_image + '" style="width: 100%;height: 798.4px;">');
     vendor_tech_image.innerHTML = '<img src="data/' + datastr.vendor_tech_image + '" style="width: 100%;height: 798.4px;">';
     vendor_equipment.innerHTML = datastr.vendor_equipment;
     vendor_equipment_eng.innerHTML = datastr.vendor_equipment_eng;
