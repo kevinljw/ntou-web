@@ -1,9 +1,9 @@
-[{"vendor_title": "永豐泰 EverVast",
+{"vendor_title": "永豐泰 EverVast",
  "vendor_equipment": "健康石斑魚苗/金目鱸魚苗/急凍鮮魚", 
  "vendor_equipment_eng": "Healthy Grouper Fingerlings", 
  "vendor_tech_image": "img/vendor_tech.jpg", 
  "tech_intro": "專職於生產各式規格的健康抗病魚苗", 
  "tech_equipment_image": "img/equipment.jpg", 
- "tech_advantage": ['— 無抗生素使用', '— 抗病能力強', '— 活動力佳', '— 使用壽命長', '— 攝餌力好'], 
+ "tech_advantage": ["— 無抗生素使用", "— 抗病能力強", "— 活動力佳", "— 使用壽命長", "— 攝餌力好"], 
  "tech_application": "龍膽石斑/龍虎斑/金目鱸/青斑", 
- "carousel_image": ['/path/to/image1','/path/to/image2','/path/to/image3']}]
+ "carousel_image": ["/path/to/image1","/path/to/image2","/path/to/image3"]}
