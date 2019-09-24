@@ -27,6 +27,10 @@
   
   </div>
 
+  <div class="vendor-tech-image">
+    
+  </div>
+
   <div class="vendor-equipment">
  
   </div>
@@ -44,37 +48,34 @@
 </div>
 
 <div class="middle-image">
-  
+  <div class="tech-equipment-image">
+    
+  </div>
 </div>
 
 <div class="detail-foot">
   <div class="tech-application">
    
   </div>
+  
+    <div class="slideshow-container">
+      <div class="img-container">
+      
+    </div>
+      <a class="prev" onclick="plusSlides(-1)"><img src="img/arrow_left.png"></a>
+      <a class="next" onclick="plusSlides(1)"><img src="img/arrow_right.png"></a>
 
-  <div id="container">
-<div id="lis">
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/B5.jpg" alt=""></a>
-</div>
-<!-- 圖片下面的那一排小圓點 到時候用JS動態輸出-->
-<ul id="tips">
-<li class="active"></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-<!-- 左右按鈕 -->
-<div id="btn">
-<a href="#" id="up"><img src="img/arrow_left.png"></a>
-<a href="#" id="next"><img src="img/arrow_right.png"></a>
-</div>
-</div>
+      <br>
 
+      
+        <div style="text-align:center" class="dot_here">
+        
+        </div>
+      
+    </div>
+      
+      
+   
 </div>
 <footer class="id_footer">
     <div class="footer-text">
@@ -94,91 +95,60 @@ xhr.onload = function(){
 
     var datastr = JSON.parse(xhr.responseText);
     var vendor_title = document.querySelector('.vendor-title');
+    var vendor_tech_image = document.querySelector('.vendor_tech_image');
     var vendor_equipment = document.querySelector('.vendor-equipment');
     var vendor_equipment_eng = document.querySelector('.vendor-equipment-eng');
     var tech_intro = document.querySelector('.tech-intro');
+    var tech_equipment_image = document.querySelector('.tech-equipment-image');
     var tech_application = document.querySelector('.tech-application');
+    var carousel_len  = datastr.carousel_image.length;
+    var carousel_img = document.querySelector('.img-container');
+    var carousel_dot = document.querySelector('.dot_here');
+    var idx;
+    for (i=0; i<carousel_len; i++) {
+      carousel_img.innerHTML += '<div class="mySlides fade"><img src="data/' + datastr.carousel_image[i] + '" style="width:100%;"></div>';
+      carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
+    }
     vendor_title.innerHTML = datastr.vendor_title;
+    vendor_tech_image.innerHTML = '<img src="data/' + datastr.vendor_tech_image + '" style="width: 100%;height: 798.4px;">';
     vendor_equipment.innerHTML = datastr.vendor_equipment;
     vendor_equipment_eng.innerHTML = datastr.vendor_equipment_eng;
     tech_intro.innerHTML = datastr.tech_intro;
+    tech_equipment_image.innerHTML = '<img src="data/' + datastr.tech_equipment_image + '" style="width: 100%;">';
     tech_application.innerHTML = datastr.tech_application;
-/*btn.onclick = function(e){
-          ┆   for (var i = 0; i < len; i++) {
-              ┆   var content = '<p>'+'<li>名稱：'+datastr[i].place+'</li>'+'</p>'+'<p>'+'<li>地址：'+datastr[i].address+'</li>'+'</p>';
-      ┆   ┆   ┆   console.log(content);
-              ┆   str+=content;
-          ┆       };
-          ┆   info.innerHTML += str;
-      ┆   };*/
+
 };
-/*
-var next=document.getElementById("next");//查詢一個叫next id;
-var up=document.getElementById("up");//查詢一個叫up id;
-var lis=document.getElementById("lis");//查詢一個叫lis id;
-var imgCount=lis.getElementsByTagName("img");//查詢lis所有圖片;
-var countMove=imgCount.length*-800;//定義變數用儲存偏移的總值;
-var container=document.getElementById("container");//獲取整個輪播圖區域
-var ul=document.getElementById("tips");//查詢一個叫tips id;
-var list=ul.getElementsByTagName("li");//查詢ul全部圓點
-var timer;
-var index=0;//list下標 從0開始！
-console.log(lis.width);
-var move=0;//定義變數用儲存偏移的值;
-//設定next下一張點選事件
-2.
-next.onclick=function(){
-move-=800;//每點選一次偏移-800PX; 第一張圖後style.left都為負值。
-index =1; 
-if(move===countMove){//如果偏移（move）等於countMove(4000),就move為0（0是第一張）
-move=0;
-index=0;
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-lis.style.left=move + "px";//設定向偏移left:move
-circle();//切換相對應圓點
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
-//設定up上一張點選事件
-up.onclick=function(){
-index-=1;
-if(move===0){ //如果偏移（move）等於0,就move為countMove(4000);
-move=countMove;
-index=list.length-1;
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-move =800;
-lis.style.left=move + "px";//設定向偏移left:move
-circle();//切換相對應圓點
-}
-//設定輪播事件
-function play(){
-timer=setInterval(function(){ //內建定時器多次執行
-next.onclick();//每1.5秒執行下一張事件！！
-},1500)
-}
-play();//載入JS自動輪播！
-//設定暫停輪播事件
-function stop(){
-clearInterval(timer);//移除定時器
-}
-container.onmouseout=play;//當滑鼠移出輪播圖區域執行自動輪播事件
-container.onmouseover=stop;//當滑鼠移入輪播圖區域執行暫停輪播事件
-//設定圓點和圖片同步切換的事件
-function circle(){
-for(var i=0; list.length>i;i  ){//for迴圈語句 迴圈所有圓點
-if(list[i].className=="active"){ //if條件語句 如果其中一個圓點的Class等於active
-list[i].className="";          //其他圓點就是Class設定為空
-}
-list[index].className="active";//list下標為index 設定Calss為cative;
-}
-}
-for(var i=0; list.length>i;i  ){ //for迴圈語句 迴圈所有圓點
-(function(i){  //閉包
-list[i].onclick=function(){ //圓點點選事件
-lis.style.left=i*-800  "px";//設定lis偏移的值
-index=i;
-circle();
-}
-})(i);    //傳入I
-}*/
+window.setInterval(function() {
+  plusSlides(1)
+}, 2500);
+
 </script>
 </body>
 </html>

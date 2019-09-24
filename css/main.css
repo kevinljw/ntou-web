@@ -178,7 +178,7 @@ body, html {
 .hero-image-detail {
   background-image: linear-gradient(118deg, #929afd, #2dbdfd);
 
-  height: 1080px;
+  height: 798.4px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -201,6 +201,13 @@ body, html {
   letter-spacing: normal;
   text-align: left;
   color: #33227c;
+}
+.vendor-tech-image{
+  position: absolute;
+  top:0px;
+  right: 0px;
+  height: 798.4px;
+  width: 58.85% ;
 }
 
 .vendor-equipment{
@@ -256,12 +263,20 @@ body, html {
 .middle-image {
   width: 100%;
   height: 1065px;
+  background-image: url('../img/bg_advantage.jpg');
+}
 
+.tech-equipment-image {
+  position: relative;
+  top: 19.66%;
+  left: 14.6%;
+  width: 38.15%;
+  height: 60.71%;
 }
 
 .detail-foot{
   width: 100%;
-  height: 722px;
+  height: 593.4px;
   background-image: linear-gradient(108deg, #939bff, #57affd 31%, #43b6fd 72%, #2dbdfd);
 
 }
@@ -283,69 +298,93 @@ body, html {
   color: #ffffff;
 }
 
-/* 容器的高 寬 相對定位 超出隱藏*/ 
-#container{
-width:364px;
-height:400px;
-margin: 0 auto;
-position:relative;
-left: 1316px;
-overflow:hidden; 
-float: left;
 
+.mySlides {
+  display: none;
+  position: relative;
+    vertical-align: middle;
 }
-/************************ 內容的高 寬 絕對定位 偏移************************/
-#lis{
-width: 107px;
-height: 266px;
-position:absolute;
-left:0;
-}
-#lis a{
-float:left;
-}
-/* 清除img浮動,正常撐開a高與高 */
-#lis a:after{
-content:"";
-display:block;
-clear:both;
-}
-/* 清除IMG之間邊距 無縫拼接 */
-#list img{
-float:left;
-}
-/******* 一排小圓點************/
-#tips{
-margin:0;
-padding:0;
 
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translate(-50%);
-list-style:none;
+/* Slideshow container */
+.slideshow-container {
+
+  max-width: 32%;
+  position: relative;
+  vertical-align: middle;
+  left: 60.54%;
+  top: 0%
 }
-#tips li{
-width:18px;
-height: 18px;
-border-radius:50%;
-border: solid 2px #3458a9;
-float:left;
-margin-left:5px;
+
+.img-container{
+  width: 60%;
+  position: relative;
+  left: 20%;
 }
-/* 切換到相應的圖片 相應小圓點的顏色 */
-#tips .active{
-background-color: #3458a9;
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position:absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
-/**** 左右按鈕 絕對定位 大小 去下劃線****************/ 
-#btn a{
-position:absolute;
-top:50%;
-margin-top:-100px;
-font-size:100px;
-text-decoration: none;
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-#btn #next{
-position:absolute;
-right:0%;
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  
+  border: solid 2px #3458a9;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3458a9
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
