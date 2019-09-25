@@ -39,6 +39,10 @@
    
   </div>
 
+  <div class="tech-intro-mark">
+    技術介紹
+  </div>
+
   <div class="tech-intro">
    
   </div>
@@ -52,15 +56,31 @@
     
   </div>
 
-  <div class="tech-advantage">
+  <div class="advantage-row">
+    <div class="equip-intro-mark">
+      技術優勢
+    </div>
+    <div class="tech-advantage">
     
+    </div>
   </div>
+  <div style="clear:both;"></div>
 </div>
 
 <div class="detail-foot">
-  <div class="tech-application">
+
+  <div class="foot-row">
+
+    <div class="tech-application-mark">
+      技術應用
+    </div>
+
+    <div class="tech-application">
    
-  </div>
+    </div>
+
+      </div>
+  
   
     <div class="slideshow-container">
       <div class="img-container">
@@ -79,7 +99,7 @@
       
     </div>
       
-      
+      <div style="clear:both;"></div>
    
 </div>
 <footer class="id_footer">
@@ -131,10 +151,12 @@ xhr.onload = function(){
     vendor_equipment_eng.innerHTML = datastr.vendor_equipment_eng;
     tech_intro.innerHTML = datastr.tech_intro;
     tech_equipment_image.innerHTML = '<img src="data/' + datastr.tech_equipment_image + '" style="width: 100%;">';
-    tech_application.innerHTML = datastr.tech_application;
-    
+    var tech_application_arr = datastr.tech_application.split('&');
+    var k;
+    for (k=0; k<tech_application_arr.length; k++) {
+      tech_application.innerHTML += tech_application_arr[k] + '<br>'
+    }
     showSlides(1);
-    
     };
 var slideIndex = 1;
 function showSlides(n) {

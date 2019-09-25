@@ -243,6 +243,31 @@ body, html {
   text-align: left;
   color: #ffffff;
 }
+.tech-intro-mark{
+  width: 12.57%;
+  height: 5.26%;
+  position: absolute;
+  left: 9.8%;
+  top:49.55%;
+  background-color: #33227c;
+  color: #ffffff;
+  border-radius:10px;
+  text-align:center;
+  line-height:6vmin;
+}
+
+.equip-intro-mark{
+  width: 30%;
+  height: 4.26%;
+  position: relative;
+  top: 24.65%;
+  left: 0;
+  background-color: #9f73f9;
+  color: #ffffff;
+  border-radius:10px;
+  text-align:center;
+  line-height:6vmin;
+}
 
 .tech-intro{
   position: absolute;
@@ -265,13 +290,20 @@ body, html {
   height: 1065px;
   background-image: url('../img/bg_advantage.jpg');
 }
-
+.advantage-row{
+  position: relative;
+  top: 0;
+  left: 20%;
+  height: 100%;
+  width: 38.28%;
+  float: left;
+}
 .tech-advantage {
+  color: #ffffff;
   position: relative;
   top: 34.27%;
-  left: 20%;
-  float: left;
-  color: #ffffff;
+  left:0;
+  font-weight: bold;
 }
 
 .tech-equipment-image {
@@ -289,11 +321,31 @@ body, html {
 
 }
 
+.foot-row{
+  position: relative;
+  height: 100%;
+  width: 60.89%;
+  float: left;
+}
+
+.tech-application-mark{
+  width: 17%;
+  height: 7.26%;
+  position: relative;
+  top: 21.36%;
+  left: 16.63%;
+  background-color: #33227c;
+  color: #ffffff;
+  border-radius:10px;
+  text-align:center;
+  line-height:6vmin;
+}
+
 .tech-application{
   position: relative;
   top: 30.35%;
-  left: 10.2%;
-  width: 50.62%;
+  left: 16.63%;
+  width: 83.36%;
   height: auto;
   font-family: sans-serif;
   font-size: 26px;
@@ -319,8 +371,9 @@ body, html {
   max-width: 32%;
   position: relative;
   vertical-align: middle;
-  left: 60.54%;
-  top: 0;
+  left: 7%;
+  top: 30%;
+  float: left;
 }
 
 .img-container{
