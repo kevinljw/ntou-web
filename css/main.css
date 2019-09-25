@@ -240,8 +240,8 @@ body, html {
   color: #ffffff;
 }
 .tech-intro-mark{
-  width: 12.57%;
-  height: 5.26%;
+  width: 10.57%;
+  padding :2px; 
   position: absolute;
   left: 9.8%;
   top:41%;
@@ -249,22 +249,28 @@ body, html {
   color: #ffffff;
   border-radius:10px;
   text-align:center;
-  line-height:5vmin;
   font-size: 25px;
+  display: table-cell;
+  vertical-align: middle;
 }
-
-.equip-intro-mark{
-  width: 30%;
-  height: 4.26%;
+section {
+    display: table;
+}
+.sec{
   position: relative;
   top: 24.65%;
   left: 0;
+  width: 30%;
+}
+.equip-intro-mark{
+  padding: 2px;
   background-color: #9f73f9;
   color: #ffffff;
   border-radius:10px;
   text-align:center;
-  line-height:5vmin;
   font-size: 25px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .tech-intro{
@@ -329,18 +335,21 @@ body, html {
   float: left;
 }
 
-.tech-application-mark{
+.sec-t-a-mark{
   width: 17%;
-  height: 7.26%;
   position: relative;
   top: 21.36%;
   left: 16.63%;
+}
+.tech-application-mark{
+  padding: 2px;
   background-color: #33227c;
   color: #ffffff;
   border-radius:10px;
   text-align:center;
-  line-height:5vmin;
   font-size: 25px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .tech-application{
