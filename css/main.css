@@ -480,26 +480,27 @@ body, html {
 
 .modal-title-eng{
   color: #ffffff;
-  width: 8%;
+  width: 100%;
   height: 5%;
   position: absolute;
   top: 29%;
-  left: 46%;
+  left: 0;
   font-size: 2vmin;
+  text-align: center;
 }
 
 .content-image-single{
-  width: 15vmin;
+  width: 8%;
   padding: 5px;
   position: absolute;
-  left: 45%;
+  left: 46%;
   top: 35.01%;
   margin:0px auto;
 
 }
 
 .content-image-left{
-  width: 15vmin;
+  width: 8%;
   padding: 5px;
   float: left;
   position: absolute;
@@ -507,7 +508,7 @@ body, html {
   left: 40.27%;
 }
 .content-image-right{
-  width: 15vmin;
+  width: 8%;
   padding: 5px;
   float: left;
    position: absolute;
