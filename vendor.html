@@ -60,8 +60,9 @@
   
     <div class="slideshow-container">
       <div class="img-container">
-      
-    </div>
+        <div class="first-slide mySlides fade">
+        </div>
+      </div>
       <a class="prev" onclick="plusSlides(-1)"><img src="img/arrow_left.png"></a>
       <a class="next" id="next" onclick="plusSlides(1)"><img src="img/arrow_right.png"></a>
 
@@ -69,7 +70,7 @@
 
       
         <div style="text-align:center" class="dot_here">
-        
+          <span class="dot" onclick="currentSlide(1)"></span>
         </div>
       
     </div>
@@ -91,6 +92,7 @@ xhr.open('GET','data/' + getValue('vendor') + '.json',true);
 console.log(xhr.responseText)
 xhr.send();
 console.log(xhr.responseText)
+var carousel_len;
 xhr.onload = function(){
 
     var datastr = JSON.parse(xhr.responseText);
@@ -101,11 +103,14 @@ xhr.onload = function(){
     var tech_intro = document.querySelector('.tech-intro');
     var tech_equipment_image = document.querySelector('.tech-equipment-image');
     var tech_application = document.querySelector('.tech-application');
-    var carousel_len  = datastr.carousel_image.length;
+    carousel_len  = datastr.carousel_image.length;
     var carousel_img = document.querySelector('.img-container');
     var carousel_dot = document.querySelector('.dot_here');
+    var carousel_first_slide = document.querySelector('.first-slide');
     var idx;
-    for (i=0; i<carousel_len; i++) {
+    carousel_first_slide.innerHTML = '<img src="data/' + datastr.carousel_image[0] + '" style="width:100%;">'
+
+    for (i=1; i<carousel_len; i++) {
       carousel_img.innerHTML += '<div class="mySlides fade"><img src="data/' + datastr.carousel_image[i] + '" style="width:100%;"></div>';
       carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
     }
@@ -118,38 +123,39 @@ xhr.onload = function(){
     tech_intro.innerHTML = datastr.tech_intro;
     tech_equipment_image.innerHTML = '<img src="data/' + datastr.tech_equipment_image + '" style="width: 100%;">';
     tech_application.innerHTML = datastr.tech_application;
-
-};
-
+    
+    showSlides(1);
+    
+    };
 var slideIndex = 1;
-showSlides(slideIndex);
+function showSlides(n) {
+      var i;
+  
+      var slides = document.getElementsByClassName("mySlides");
+      console.log(slides.length);
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    };
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+      showSlides(slideIndex += n);
+    };
+ function currentSlide(n) {
+      showSlides(slideIndex = n);
+    };
+    window.setInterval(function() {
+          document.querySelector('.next').click();
+        }, 2500);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-window.setInterval(function() {
-  $('#next').click();
-}, 2500);
 </script>
 </body>
 </html>

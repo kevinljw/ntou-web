@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
 }
 
 .hero-image {
@@ -33,7 +33,7 @@ body, html {
 }
 .id_footer .footer-text {
   width: 100%;
-  font-family: Arial;
+  font-family: sans-serif;
   font-size: 1vmin;
   font-weight: bold;
   font-style: normal;
@@ -46,7 +46,7 @@ body, html {
 .NTOU-GLORIA {
   width: 13.59%;
   height: 13.6%;
-  font-family: Helvetica;
+  font-family: sans-serif;
   font-size: 5vmin;
   font-weight: bold;
   font-style: normal;
@@ -109,7 +109,7 @@ body, html {
   color: #ffffff;
   display: block;
   transition: 0.3s;
-  font-family: Arial;
+  font-family: sans-serif;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -192,7 +192,7 @@ body, html {
   left: 9.8%;
   width: auto;
   height: 5%;
-  font-family: Arial;
+  font-family: sans-serif;
   font-size: 28px;
   font-weight: bold;
   font-style: normal;
@@ -216,7 +216,7 @@ body, html {
   left: 9.8%;
   width: auto;
   height: 9.26%;
-  font-family: Arial;
+  font-family: sans-serif;
   font-size: 53px;
   font-weight: bold;
   font-style: normal;
@@ -233,7 +233,7 @@ body, html {
   left: 9.8%;
   width: auto;
   height: 3.88%;
-  font-family: Arial;
+  font-family: sans-serif;
   font-size: 28px;
   font-weight: bold;
   font-style: normal;
@@ -250,7 +250,7 @@ body, html {
   left: 9.8%;
   width: 27.55%;
   height: auto;
-  font-family: Arial;
+  font-family:sans-serif;
   font-size: 26px;
   font-weight: bold;
   font-style: normal;
@@ -287,7 +287,7 @@ body, html {
   left: 10.2%;
   width: 50.62%;
   height: auto;
-  font-family: Arial;
+  font-family: sans-serif;
   font-size: 26px;
   font-weight: bold;
   font-style: normal;
@@ -387,4 +387,42 @@ body, html {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #33227c;
+  margin: auto;
+  width: 58.33%;
+  height: 56.11%;
+}
+
+/* The Close Button */
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
