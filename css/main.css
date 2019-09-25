@@ -303,10 +303,10 @@ body, html {
 .tech-advantage {
   color: #ffffff;
   position: relative;
-  top: 34.27%;
+  top: 30%;
   left:0;
   font-weight: bold;
-  line-height:3;
+  line-height:2;
   font-size: 25px;
 }
 
@@ -376,7 +376,7 @@ body, html {
   max-width: 32%;
   position: relative;
   vertical-align: middle;
-  left: 7%;
+  left: 4%;
   top: 30%;
   float: left;
 }
