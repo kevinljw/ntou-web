@@ -160,12 +160,17 @@ xhr.onload = function(){
     vendor_tech_image.innerHTML = vendor_t_i_str;
     vendor_equipment.innerHTML = datastr.vendor_equipment;
     vendor_equipment_eng.innerHTML = datastr.vendor_equipment_eng;
-    tech_intro.innerHTML = datastr.tech_intro;
     tech_equipment_image.innerHTML = '<img src="data/' + datastr.tech_equipment_image + '" style="width: 100%;">';
     var tech_application_arr = datastr.tech_application.split('&');
     var k;
     for (k=0; k<tech_application_arr.length; k++) {
       tech_application.innerHTML += tech_application_arr[k] + '<br>'
+    }
+
+    var tech_intro_arr = datastr.tech_intro.split('&');
+    var z;
+    for (z=0; z<tech_intro_arr.length; z++) {
+      tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
     }
     showSlides(1);
     };
