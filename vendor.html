@@ -51,6 +51,10 @@
   <div class="tech-equipment-image">
     
   </div>
+
+  <div class="tech-advantage">
+    
+  </div>
 </div>
 
 <div class="detail-foot">
@@ -104,6 +108,8 @@ xhr.onload = function(){
     var tech_equipment_image = document.querySelector('.tech-equipment-image');
     var tech_application = document.querySelector('.tech-application');
     carousel_len  = datastr.carousel_image.length;
+    var tech_advantage = document.querySelector('.tech-advantage');
+    var tech_advantage_len = datastr.tech_advantage.length;
     var carousel_img = document.querySelector('.img-container');
     var carousel_dot = document.querySelector('.dot_here');
     var carousel_first_slide = document.querySelector('.first-slide');
@@ -115,7 +121,10 @@ xhr.onload = function(){
       carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
     }
     vendor_title.innerHTML = datastr.vendor_title;
-
+    var j;
+    for (j=0; j<tech_advantage_len; j++) {
+      tech_advantage.innerHTML += datastr.tech_advantage[j] + '<br>';
+    };
     var vendor_t_i_str = '<img src="data/' + datastr.vendor_tech_image + '" style="width: 100%;height: 798.4px;">';
     vendor_tech_image.innerHTML = vendor_t_i_str;
     vendor_equipment.innerHTML = datastr.vendor_equipment;
