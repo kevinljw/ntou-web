@@ -457,7 +457,7 @@ body, html {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 10.5%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -467,25 +467,54 @@ body, html {
   
 }
 .modal-title{
-  margin:0px auto;
+  color: #ffffff;
+  width: 8%;
+  height: 5%;
+  position: absolute;
+  top: 23%;
+  left: 46%;
+  font-size: 3vmin;
+  font-weight: bold;
+
 }
 
 .modal-title-eng{
-  margin:0px auto;
+  color: #ffffff;
+  width: 8%;
+  height: 5%;
+  position: absolute;
+  top: 29%;
+  left: 46%;
+  font-size: 2vmin;
 }
 
+.content-image-single{
+  width: 15vmin;
+  padding: 5px;
+  position: absolute;
+  left: 45%;
+  top: 35.01%;
+  margin:0px auto;
 
-.content-image{
-  width: 20vmin;
+}
+
+.content-image-left{
+  width: 15vmin;
   padding: 5px;
   float: left;
+  position: absolute;
+  top: 35.01%;
+  left: 40.27%;
+}
+.content-image-right{
+  width: 15vmin;
+  padding: 5px;
+  float: left;
+   position: absolute;
+  top: 35.01%;
+  right: 40.27%;
 }
 
-.modal-image::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 /* Modal Content */
 .modal-content {
   background-color: #33227c;
@@ -497,8 +526,10 @@ body, html {
 
 /* The Close Button */
 .modal-close {
+  position: relative;
+  left: 48%;
   color: #ffffff;
-  float: right;
+  
   font-size: 28px;
   font-weight: bold;
 }
@@ -511,7 +542,36 @@ body, html {
 }
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4{
-  display: none
+  display: none;
+}
+
+.prev-modal, .next-modal {
+  cursor: pointer;
+  position:absolute;
+  top: 40.6%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev-modal{
+  left: 30.3%;
+}
+/* Position the "next button" to the right */
+.next-modal {
+  right: 30.3%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-modal:hover, .next-modal:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
 
