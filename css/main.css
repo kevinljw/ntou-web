@@ -188,10 +188,10 @@ body, html {
 
 .vendor-title {
   position: absolute;
-  top: 169.4px;
-  left: 188px;
-  width: 230px;
-  height: 40px;
+  top: 21.21%;
+  left: 9.8%;
+  width: auto;
+  height: 5%;
   font-family: Arial;
   font-size: 28px;
   font-weight: bold;
@@ -212,10 +212,10 @@ body, html {
 
 .vendor-equipment{
   position: absolute;
-  top: 223.4px; 
-  left: 188px;
-  width: 424px;
-  height: 74px;
+  top: 27.98%; 
+  left: 9.8%;
+  width: auto;
+  height: 9.26%;
   font-family: Arial;
   font-size: 53px;
   font-weight: bold;
@@ -229,10 +229,10 @@ body, html {
 
 .vendor-equipment-eng {
   position: absolute;
-  top: 299.4px;
-  left:188px;
-  width: 313px;
-  height: 31px;
+  top: 37.5%;
+  left: 9.8%;
+  width: auto;
+  height: 3.88%;
   font-family: Arial;
   font-size: 28px;
   font-weight: bold;
@@ -246,10 +246,10 @@ body, html {
 
 .tech-intro{
   position: absolute;
-  top:  483.6px;
-  left: 188px;
-  width: 529px;
-  height: 199px;
+  top:  60.57%;
+  left: 9.8%;
+  width: 27.55%;
+  height: auto;
   font-family: Arial;
   font-size: 26px;
   font-weight: bold;
@@ -283,10 +283,10 @@ body, html {
 
 .tech-application{
   position: relative;
-  top: 296.6px;
-  left: 194px;
-  width: 972px;
-  height: 201px;
+  top: 30.35%;
+  left: 10.2%;
+  width: 50.62%;
+  height: auto;
   font-family: Arial;
   font-size: 26px;
   font-weight: bold;
@@ -312,7 +312,7 @@ body, html {
   position: relative;
   vertical-align: middle;
   left: 60.54%;
-  top: 0%
+  top: 0;
 }
 
 .img-container{
