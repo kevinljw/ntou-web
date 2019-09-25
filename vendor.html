@@ -13,7 +13,7 @@
       <a href="javascript:void(0)" onclick="closeNav()"><img src="img/close.png" style='width: 100%; height: 100%;'></a>
     </div>
     <div class="navcontainer">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <!--a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a-->
@@ -110,6 +110,13 @@
 <script src="js/jsonData.js"></script>
 
 <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "21.4%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 console.log(12345);
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + getValue('vendor') + '.json',true);
