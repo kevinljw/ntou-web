@@ -402,10 +402,13 @@ section {
   float: left;
 }
 
+.prev-next-btn{
+  float: left;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  float: left;
+  
   top: 50%;
   width: auto;
   padding: 16px;
