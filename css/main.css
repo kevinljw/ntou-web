@@ -141,7 +141,7 @@ body, html {
 .menu{
   width: 3.28%;
   height: 5.83%;
-  position: absolute;
+  position: fixed;
   top: 6.6%;
   left: 3.3%;
   color: #ffffff;
@@ -330,9 +330,8 @@ section {
 
 .foot-row{
   position: relative;
-  height: 100%;
-  width: 60.89%;
-  float: left;
+  height: 45%;
+  width: 100%;
 }
 
 .sec-t-a-mark{
@@ -377,14 +376,23 @@ section {
 }
 
 /* Slideshow container */
+.slide-show-row{
+  height: 55%;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
 .slideshow-container {
 
-  max-width: 32%;
-  position: relative;
-  vertical-align: middle;
-  left: 4%;
-  top: 30%;
-  float: left;
+  /*max-width: 80%;*/
+  text-align: center;
+  /*vertical-align: middle;*/
+  left: 0%;
+  top: 0%;
+  width: 80%;
 }
 
 .img-container{
@@ -396,7 +404,7 @@ section {
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position:absolute;
+  
   top: 50%;
   width: auto;
   padding: 16px;
@@ -438,6 +446,30 @@ section {
   background-color: #3458a9
 }
 
+
+/* The dots/bullets/indicators */
+.dot-left-1, .dot-left-2, .dot1, .dot2, .dot3, .dot4{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border: solid 2px white;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot_idx{
+  top: 60%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+.active_idx, .dot-left-1:hover, .dot-left-2:hover, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover {
+  background-color: white;
+}
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -474,6 +506,18 @@ section {
   overflow: auto; /* Enable scroll if needed */
   
   
+}
+.modal-left-btn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5.5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+   
 }
 .modal-title{
   color: #ffffff;
@@ -534,6 +578,13 @@ section {
   height: 56.11%;
 }
 
+.modal-content-left {
+  background-color: #33227c;
+  text-align:center;
+  margin: auto;
+  width: 72.33%;
+  height: 76.11%;
+}
 /* The Close Button */
 .modal-close {
   position: relative;
@@ -546,6 +597,23 @@ section {
 
 .modal-close:hover,
 .modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.modal-close-left {
+  position: relative;
+  left: 49%;
+  color: #ffffff;
+  
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close-left:hover,
+.modal-close-left:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -584,5 +652,12 @@ section {
   background-color: rgba(0,0,0,0.8);
 }
 
-
+.back{
+  width: 3.28%;
+  height: 5.83%;
+  position: fixed;
+  top: 85%;
+  left: 3.3%;
+  color: #ffffff;
+}
 
