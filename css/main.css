@@ -399,14 +399,13 @@ section {
   width: 20%;
   height: 80%;
   position: absolute;
-  text-align: center;
-  left: 0%;
+  float: left;
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  
+  float: left;
   top: 50%;
   width: auto;
   padding: 16px;
