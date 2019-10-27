@@ -396,10 +396,11 @@ section {
 }
 
 .img-container{
-  width: 60%;
+  width: 20%;
   height: 80%;
-  position: relative;
-  left: 20%;
+  position: absolute;
+  text-align: center;
+  left: 0%;
 }
 
 /* Next & previous buttons */
