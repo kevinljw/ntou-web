@@ -397,6 +397,7 @@ section {
 
 .img-container{
   width: 60%;
+  height: 80%;
   position: relative;
   left: 20%;
 }
