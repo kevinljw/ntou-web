@@ -5,7 +5,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: url('../img/bg-home.jpg');
+  background: url('../img/bg-home.mp4');
 
   height: 100%;
   width: 100%;
@@ -13,6 +13,13 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
 
 
@@ -60,7 +67,7 @@ body, html {
   top:19.4%;
 }
 .container-1{
-  position: relative;
+  position: absolute;
   top: 27.27%;
   left: 48%;
   width: 6.9%;
