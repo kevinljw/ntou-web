@@ -736,6 +736,6 @@ section {
   color: #ffffff;
 }
 
-#img_c ul li {
+#img_c ul, li {
 　display:inline;
 }
