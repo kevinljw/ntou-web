@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="hero-ima">
+<div class="hero-ima slideInLeft">
   <video autoplay muted loop id="myVideo">
   <source src="img/bg-home.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
@@ -427,12 +427,12 @@ var span_left = document.getElementsByClassName("modal-close-left");
 var slideIndex_idx = [1,1,1,1,1,1];
 var slideId_idx = ["mySlides-left-1","mySlides-left-2","mySlides1", "mySlides2", "mySlides3", "mySlides4"];
 var dots_arr = ["dot-left-1","dot-left-2","dot1", "dot2", "dot3", "dot4"];
-showSlides(1, 0);
-showSlides(1, 1);
-showSlides(1, 2);
-showSlides(1, 3);
-showSlides(1, 4);
-showSlides(1, 5);
+showSlides_idx(1, 0);
+showSlides_idx(1, 1);
+showSlides_idx(1, 2);
+showSlides_idx(1, 3);
+showSlides_idx(1, 4);
+showSlides_idx(1, 5);
 function plusSlides_idx(n, no) {
   showSlides_idx(slideIndex_idx[no] += n, no);
 }

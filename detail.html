@@ -3,9 +3,351 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 
+<div class="hero-ima slideInLeft" id="home-page">
+  <video autoplay muted loop id="myVideo">
+  <source src="img/bg-home.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+  <div id="mySidenav" class="sidenav">
+    <div class="close">
+      <a href="javascript:void(0)" onclick="closeNav()"><img src="img/close.png" style='width: 100%; height: 100%;'></a>
+    </div>
+  <div class="navcontainer">
+    <a href="index.html">Home</a>
+    <!--a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a-->
+  </div>
+</div>
+  <div class="menu">
+    <a onclick="openNav()" href="javascript:void(0)"><img src="img/menu.png" style='width: 100%; height: 100%;'></a>
+  </div>
+  
+  <!--title-->
+  <div class="NTOU-GLORIA">
+        NTOU <br> GLORIA
+  </div>
+
+
+
+  <!-- 左側按鈕 AI智慧-->
+  <div class="tmp-left-btn1" id="category">
+    <input type="button" value="AI智慧" name="submit_Btn" id="category" class="btn" style="position:absolute;left:3.3%;top:69%;width:13.59%;height:5.6% ;background-color:#33227c;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;">
+    <div id="myModal" class="modal-left-btn bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content-left">
+        <span class="modal-close-left">&times;</span>
+        <div class="resp-container" >
+      
+          <iframe class="resp-iframe" src="https://www.youtube.com/embed/0gWIvfiz_4k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 左側按鈕 藻類-->
+  <div class="tmp-left-btn1" id="category">
+    <input type="button" value="藻類" name="submit_Btn" id="category" class="btn" style="position:absolute;left:3.3%;top:76%;width:13.59%;height:5.6% ;background-color:#33227c;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;">
+    <div id="myModal" class="modal-left-btn bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content-left">
+        <span class="modal-close-left">&times;</span>
+        
+        
+          <div class="slideshow-container-index">
+            <div class="mySlides-left-1">
+                <div class="resp-container">
+                  <img src="img/藻類/01.jpg" class="resp-img">
+                </div>
+            </div>
+
+            <div class="mySlides-left-1">
+              <div class="resp-container">
+                <img src="img/藻類/02.jpg" class="resp-img">
+              </div>
+            </div>
+
+            <div class="mySlides-left-1">
+              <div class="resp-container">
+                <img src="img/藻類/03.jpg" class="resp-img">
+              </div>
+            </div>
+
+
+          <a class="prev-modal-left" onclick="plusSlides_idx(-1,0)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal-left" id="next" onclick="plusSlides_idx(1,0)"><img src="img/arrow_right.png"></a>
+        
+          
+          </div>
+
+          <div class="dot_idx_left">
+            <span class="dot-left-1" onclick="currentSlide_idx(1,0)"></span>
+            <span class="dot-left-1" onclick="currentSlide_idx(2,0)"></span>
+            <span class="dot-left-1" onclick="currentSlide_idx(3,0)"></span>
+          </div>
+    
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 左側按鈕 品牌-->
+  <div class="tmp-left-btn1" id="category">
+    <input type="button" value="品牌" name="submit_Btn" id="category" class="btn" style="position:absolute;left:3.3%;top:83%;width:13.59%;height:5.6% ;background-color:#33227c;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;">
+    <div id="myModal" class="modal-left-btn bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content-left">
+        <span class="modal-close-left">&times;</span>
+        <div style="vertical-align: middle;">
+        
+          <div class="slideshow-container-index">
+            <div class="mySlides-left-2">
+              <div class="resp-container">
+                <img src="img/品牌/01.jpg" class="resp-img">
+              </div>
+            </div>
+
+
+          <div class="mySlides-left-2">
+              <div class="resp-container">
+                <img src="img/品牌/02.jpg" class="resp-img">
+              </div>
+            </div> 
+
+          <div class="mySlides-left-2">
+              <div class="resp-container">
+                <img src="img/品牌/03.jpg" class="resp-img">
+              </div>
+            </div>
+          <a class="prev-modal-left" onclick="plusSlides_idx(-1,1)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal-left" id="next" onclick="plusSlides_idx(1,1)"><img src="img/arrow_right.png"></a>         
+          </div>
+          <div class="dot_idx_left">
+            <span class="dot-left-2" onclick="currentSlide_idx(1,1)"></span>
+            <span class="dot-left-2" onclick="currentSlide_idx(2,1)"></span>
+            <span class="dot-left-2" onclick="currentSlide_idx(3,1)"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- button -->
+  <div class="container-1" id="category">
+    <input type="image" name="submit_Btn" img src="img/category-1.png" class="category-size btn" onClick="">
+    <div id="myModal" class="modal bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div style="vertical-align: middle;">
+          
+        
+        
+          <div class="modal-title">
+            健康種苗
+          </div>
+          
+          <div class="modal-title-eng">Healthy Fingerlings</div>
+          
+          <div class="slideshow-container-index">
+            <div class="mySlides1">
+              <div class="content-image-left">
+                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-1.png" class="category-size" onClick="location.href='vendor.html?vendor=1-1'">
+              </div>
+            <div class="content-image-right">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-2.png" class="category-size" onClick="location.href='vendor.html?vendor=1-2'">
+            </div>
+          </div>
+          <div class="mySlides1">
+            <div class="content-image-single">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-3.png" class="category-size" onClick=" location.href='vendor.html?vendor=1-3'">
+            </div>
+          </div>
+          <a class="prev-modal" onclick="plusSlides_idx(-1,2)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal" id="next" onclick="plusSlides_idx(1,2)"><img src="img/arrow_right.png"></a>
+
+          <br>
+          
+          </div>
+          <div class="dot_idx">
+            <span class="dot1" onclick="currentSlide_idx(1,2)"></span>
+            <span class="dot1" onclick="currentSlide_idx(2,2)"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+  <div class="container-2" id="category">
+    <input type="image" name="submit_Btn" id="category" img src="img/category-2.png" class="category-size btn" onClick="vendor(1)">
+    <div id="myModal" class="modal bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div style="vertical-align: middle;">
+          
+        
+        
+          <div class="modal-title">
+            新穎製劑
+          </div>
+          
+          <div class="modal-title-eng">Novel Additives</div>
+          
+          <div class="slideshow-container-index">
+            <div class="mySlides2">
+              <div class="content-image-left">
+                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/2-1.png" class="category-size" onClick="location.href='vendor.html?vendor=2-1'">
+              </div>
+            <div class="content-image-right">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/2-2.png" class="category-size" onClick="location.href='vendor.html?vendor=2-2'">
+            </div>
+          </div>
+          <a class="prev-modal" onclick="plusSlides_idx(-1,3)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal" id="next" onclick="plusSlides_idx(1,3)"><img src="img/arrow_right.png"></a>
+          <br>
+          
+          </div>
+          <div class="dot_idx">
+            <span class="dot2" onclick="currentSlide_idx(1,3)"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-3">
+    <input type="image" name="submit_Btn" id="category" img src="img/category-3.png" class="category-size btn" onClick="">
+    <div id="myModal" class="modal bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div style="vertical-align: middle;">
+          
+        
+        
+          <div class="modal-title">
+            智慧養殖
+          </div>
+          
+          <div class="modal-title-eng">AIoT</div>
+          
+          <div class="slideshow-container-index">
+            <div class="mySlides3">
+              <div class="content-image-left">
+                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/3-1.png" class="category-size" onClick="location.href='vendor.html?vendor=3-1'">
+              </div>
+            <div class="content-image-right">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/3-2.png" class="category-size" onClick="location.href='vendor.html?vendor=3-2'">
+            </div>
+            <div style="clear:both;"></div>
+          </div>
+          <div class="mySlides3">
+            <div class="content-image-left">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/3-3.png" class="category-size" onClick=" location.href='vendor.html?vendor=3-3'">
+            </div>
+            <div class="content-image-right">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/3-4.png" class="category-size" onClick=" location.href='vendor.html?vendor=3-4'">
+            </div>
+          </div>
+          <div class="mySlides3">
+            <div class="content-image-single">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/3-5.png" class="category-size" onClick=" location.href='vendor.html?vendor=3-5'">
+            </div>
+          </div>
+          <a class="prev-modal" onclick="plusSlides_idx(-1,4)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal" id="next" onclick="plusSlides_idx(1,4)"><img src="img/arrow_right.png"></a>
+          <br>
+          
+          </div>
+          <div class="dot_idx">
+            <span class="dot3" onclick="currentSlide_idx(1,4)"></span>
+            <span class="dot3" onclick="currentSlide_idx(2,4)"></span>
+            <span class="dot3" onclick="currentSlide_idx(3,4)"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-4">
+    <input type="image" name="submit_Btn" id="category" img src="img/category-4.png" class="category-size btn" onClick="vendor(3)">
+    <div id="myModal" class="modal bounceIn">
+
+  <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div >
+          
+        
+        
+          <div class="modal-title">
+            鱻魚安全
+          </div>
+          
+          <div class="modal-title-eng">Bio-Security</div>
+          
+          <div class="slideshow-container-index">
+            <div class="mySlides4">
+              <div class="content-image-left">
+                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/4-1.png" class="category-size" onClick="location.href='vendor.html?vendor=4-1'">
+              </div>
+            <div class="content-image-right">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/4-2.png" class="category-size" onClick="location.href='vendor.html?vendor=4-2'">
+            </div>
+            <div style="clear:both;"></div>
+          </div>
+          <div class="mySlides4">
+            <div class="content-image-single">
+              <input type="image" name="submit_Btn" id="category" img src="data/logo-img/4-3.png" class="category-size" onClick=" location.href='vendor.html?vendor=4-3'">
+            </div>
+          </div>
+          <a class="prev-modal" onclick="plusSlides_idx(-1,5)"><img src="img/arrow_left.png"></a>
+          <a class="next-modal" id="next" onclick="plusSlides_idx(1,5)"><img src="img/arrow_right.png"></a>
+          <br>
+          
+          </div>
+          <div class="dot_idx">
+            <span class="dot4" onclick="currentSlide_idx(1,5)"></span>
+            <span class="dot4" onclick="currentSlide_idx(2,5)"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+
+  <footer class="id_footer">
+    <div class="footer-text">
+        海洋大學國際產學聯盟   聯絡人：高淑雲  電話：02-24622192#2297  E-Mail：gloria@mail.ntou.edu.tw
+    </div>
+    </footer> <!-- /id_footer -->
+</div>
+
+
+<div class="vendor-page slideInRight">
 <div class="hero-image-detail">
 
   <div id="mySidenav" class="sidenav">
@@ -13,7 +355,7 @@
       <a href="javascript:void(0)" onclick="closeNav()"><img src="img/close.png" style='width: 100%; height: 100%;'></a>
     </div>
     <div class="navcontainer">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <!--a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a-->
@@ -23,20 +365,32 @@
     <a onclick="openNav()" href="javascript:void(0)"><img src="img/menu.png" style='width: 100%; height: 100%;'></a>
   </div>
 
+  <div class="back">
+    <a onclick="openNav()" href="javascript:void(0)"><img src="img/back.png" style='width: 100%; height: 100%;'></a>
+  </div>
+
   <div class="vendor-title">
-    泰義 TAI-YIH SUN
+  
+  </div>
+
+  <div class="vendor-tech-image">
+    
   </div>
 
   <div class="vendor-equipment">
-    水產養殖機械設備
+ 
   </div>
   
-  <div class="Aquaculture-equipment">
-    Aquaculture equipment
+  <div class="vendor-equipment-eng">
+   
   </div>
-
-  <div class="ae-detail">
-    泰義工業股份有限公司成立於1979年，經二十多年成長，由專業生產水產用減速機、馬達進而陸續研發生產工業用減速機、馬達、鼓風機、魯式鼓風機、泵浦等高品質高效率之工業產品。
+  <section>
+    <div class="tech-intro-mark">
+      公司介紹
+    </div>
+  </section>
+  <div class="tech-intro">
+   
   </div>
    
 
@@ -44,113 +398,304 @@
 </div>
 
 <div class="middle-image">
-  
+  <div class="tech-equipment-image">
+    
+  </div>
+
+  <div class="advantage-row">
+    <section class="sec">
+      <div class="equip-intro-mark">
+        核心技術
+      </div>
+    </section>
+    <div class="tech-advantage">
+    
+    </div>
+  </div>
+  <div style="clear:both;"></div>
 </div>
 
 <div class="detail-foot">
-  <div class="detail-foot-text">
-    水產養殖機械設備-養殖用水車、增氧機、給氧機、多葉輪、減速機(渦輪減速機、傘齒輪減速機、齒輪減速機)、工業用馬達(單相/三相交流電動馬達、立式工業馬達、臥式工業馬達、振動馬達)、鼓風機(環形(型)鼓風機、透浦式鼓風機)魯式鼓風機、魯氐鼓風機、歸港鼓風機、幫浦(泵浦)、大排水量幫浦、一般用幫浦、污泥(污水)用幫浦、工業用幫浦、減速機、馬達、工業用減速機、馬達、鼓風機、魯式鼓風機、泵浦。
 
+  <div class="foot-row">
+
+    <section class="sec-t-a-mark">
+      <div class="tech-application-mark">
+        主力產品
+      </div>
+    </section>
+
+    <div class="tech-application">
+   
+    </div>
+
+      </div>
+  
+    <div class="slide-show-row">
+      <div class="prev-btn">
+      <a class="prev" onclick="plusSlides(-1)"><img src="img/arrow_left.png"></a>
+      </div>
+      <div class="img-container">
+        <div class="first-slide mySlides fade" id="img_c">
+        </div>
+      </div>
+      
+      <div class="next-btn">
+      <a class="next" id="next" onclick="plusSlides(1)"><img src="img/arrow_right.png"></a>
   </div>
+      <br>
 
-  <div id="container">
-<div id="lis">
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/" alt=""></a>
-<a href="#"><img src="img/B5.jpg" alt=""></a>
-</div>
-<!-- 圖片下面的那一排小圓點 到時候用JS動態輸出-->
-<ul id="tips">
-<li class="active"></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-<!-- 左右按鈕 -->
-<div id="btn">
-<a href="#" id="up"><img src="img/arrow_left.png"></a>
-<a href="#" id="next"><img src="img/arrow_right.png"></a>
-</div>
-</div>
-
+      
+        <div style="text-align:center;" class="dot_here">
+          <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+      
+   
+  </div>
+      
+   
 </div>
 <footer class="id_footer">
     <div class="footer-text">
         海洋大學國際產學聯盟   聯絡人：高淑雲  電話：02-24622192#2297  E-Mail：gloria@mail.ntou.edu.tw
     </div>
 </footer> <!-- /id_footer -->
-
+</div>
 <script>
-var next=document.getElementById("next");//查詢一個叫next id;
-var up=document.getElementById("up");//查詢一個叫up id;
-var lis=document.getElementById("lis");//查詢一個叫lis id;
-var imgCount=lis.getElementsByTagName("img");//查詢lis所有圖片;
-var countMove=imgCount.length*-800;//定義變數用儲存偏移的總值;
-var container=document.getElementById("container");//獲取整個輪播圖區域
-var ul=document.getElementById("tips");//查詢一個叫tips id;
-var list=ul.getElementsByTagName("li");//查詢ul全部圓點
-var timer;
-var index=0;//list下標 從0開始！
-console.log(lis.width);
-var move=0;//定義變數用儲存偏移的值;
-//設定next下一張點選事件
-2.
-next.onclick=function(){
-move-=800;//每點選一次偏移-800PX; 第一張圖後style.left都為負值。
-index =1; 
-if(move===countMove){//如果偏移（move）等於countMove(4000),就move為0（0是第一張）
-move=0;
-index=0;
+function openNav() {
+  document.getElementById("mySidenav").style.width = "21.4%";
 }
-lis.style.left=move + "px";//設定向偏移left:move
-circle();//切換相對應圓點
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
-//設定up上一張點選事件
-up.onclick=function(){
-index-=1;
-if(move===0){ //如果偏移（move）等於0,就move為countMove(4000);
-move=countMove;
-index=list.length-1;
+
+// Get the modal
+var modal = document.getElementsByClassName("modal");
+var btn = document.getElementsByClassName("btn");
+var span = document.getElementsByClassName("modal-close");
+
+//for left btn
+var modal_left = document.getElementsByClassName("modal-left-btn");
+var span_left = document.getElementsByClassName("modal-close-left");
+// When the user clicks the button, open the modal 
+  btn[0].onclick = function() {
+    modal_left[0].style.display = "block";
+  };
+  span_left[0].onclick = function() {
+    modal_left[0].style.display = "none";
+  }
+
+  btn[1].onclick = function() {
+    modal_left[1].style.display = "block";
+  };
+  span_left[1].onclick = function() {
+    modal_left[1].style.display = "none";
+  }
+
+  btn[2].onclick = function() {
+    modal_left[2].style.display = "block";
+  };
+  span_left[2].onclick = function() {
+    modal_left[2].style.display = "none";
+  }
+
+
+  btn[3].onclick = function() {
+    modal[0].style.display = "block";
+  };
+  span[0].onclick = function() {
+    modal[0].style.display = "none";
+  }
+
+  btn[4].onclick = function() {
+    modal[1].style.display = "block";
+  };
+  span[1].onclick = function() {
+    modal[1].style.display = "none";
+  }
+
+  btn[5].onclick = function() {
+    modal[2].style.display = "block";
+  };
+  span[2].onclick = function() {
+    modal[2].style.display = "none";
+  }
+
+  btn[6].onclick = function() {
+    modal[3].style.display = "block";
+  };
+  span[3].onclick = function() {
+    modal[3].style.display = "none";
+  }
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
+
+
+var slideIndex_idx = [1,1,1,1,1,1];
+var slideId_idx = ["mySlides-left-1","mySlides-left-2","mySlides1", "mySlides2", "mySlides3", "mySlides4"];
+var dots_arr = ["dot-left-1","dot-left-2","dot1", "dot2", "dot3", "dot4"];
+showSlides_idx(1, 0);
+showSlides_idx(1, 1);
+showSlides_idx(1, 2);
+showSlides_idx(1, 3);
+showSlides_idx(1, 4);
+showSlides_idx(1, 5);
+function plusSlides_idx(n, no) {
+  showSlides_idx(slideIndex_idx[no] += n, no);
 }
-move =800;
-lis.style.left=move + "px";//設定向偏移left:move
-circle();//切換相對應圓點
+
+function showSlides_idx(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId_idx[no]);
+  var dots = document.getElementsByClassName(dots_arr[no]);
+  console.log(dots)
+  if (n > x.length) {slideIndex_idx[no] = 1}    
+  if (n < 1) {slideIndex_idx[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active_idx", "");
+      }
+  x[slideIndex_idx[no]-1].style.display = "block";
+  dots[slideIndex_idx[no]-1].className += " active_idx";  
 }
-//設定輪播事件
-function play(){
-timer=setInterval(function(){ //內建定時器多次執行
-next.onclick();//每1.5秒執行下一張事件！！
-},1500)
-}
-play();//載入JS自動輪播！
-//設定暫停輪播事件
-function stop(){
-clearInterval(timer);//移除定時器
-}
-container.onmouseout=play;//當滑鼠移出輪播圖區域執行自動輪播事件
-container.onmouseover=stop;//當滑鼠移入輪播圖區域執行暫停輪播事件
-//設定圓點和圖片同步切換的事件
-function circle(){
-for(var i=0; list.length>i;i  ){//for迴圈語句 迴圈所有圓點
-if(list[i].className=="active"){ //if條件語句 如果其中一個圓點的Class等於active
-list[i].className="";          //其他圓點就是Class設定為空
-}
-list[index].className="active";//list下標為index 設定Calss為cative;
-}
-}
-for(var i=0; list.length>i;i  ){ //for迴圈語句 迴圈所有圓點
-(function(i){  //閉包
-list[i].onclick=function(){ //圓點點選事件
-lis.style.left=i*-800  "px";//設定lis偏移的值
-index=i;
-circle();
-}
-})(i);    //傳入I
-}
+function currentSlide_idx(n, no) {
+      showSlides_idx(slideIndex_idx[no] = n,no);
+    };
+
+
+console.log(12345);
+
+function load_page(param) {
+  document.getElementById("home-page").style.display='none;';
+  document.getElementById("vendor_page").style.display='block';
+  
+var xhr = new XMLHttpRequest();
+xhr.open('GET','data/' + param + '.json',true);
+console.log(xhr.responseText)
+xhr.send();
+console.log(xhr.responseText)
+var carousel_len;
+xhr.onload = function(){
+
+    var datastr = JSON.parse(xhr.responseText);
+    var vendor_title = document.querySelector('.vendor-title');
+    var vendor_tech_image = document.querySelector('.vendor-tech-image');
+    var vendor_equipment = document.querySelector('.vendor-equipment');
+    var vendor_equipment_eng = document.querySelector('.vendor-equipment-eng');
+    var tech_intro = document.querySelector('.tech-intro');
+    var tech_equipment_image = document.querySelector('.tech-equipment-image');
+    var tech_application = document.querySelector('.tech-application');
+    carousel_len  = datastr.carousel_image.length;
+    var tech_advantage = document.querySelector('.tech-advantage');
+    var tech_advantage_len = datastr.tech_advantage.length;
+    var carousel_img = document.querySelector('.img-container');
+    var carousel_dot = document.querySelector('.dot_here');
+    var carousel_first_slide = document.querySelector('.first-slide');
+    var idx;
+    var car_idx;
+    var tmp_car_len;
+    var tmp_html_first_carousel;
+    var tmp_html_other_carousel;
+    
+    if (carousel_len > 4){
+      tmp_car_len = 4;
+    }else{
+      tmp_car_len = carousel_len
+    }
+
+    tmp_html_first_carousel = '';
+    for (car_idx=0; car_idx<tmp_car_len; car_idx++){
+      tmp_html_first_carousel += '<div class="car_container" style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+      }
+    
+    carousel_first_slide.innerHTML = tmp_html_first_carousel;
+    
+    var car_counter;
+    if (carousel_len > 4){
+      tmp_html_other_carousel = '';
+      for (i=1; i< parseInt(carousel_len/4)+1;i++ ){
+        tmp_html_other_carousel += '<div class="mySlides fade" id="img_c">';
+        if ((i+1)*4 > carousel_len){
+          car_counter = carousel_len
+        }else{
+          car_counter = (i+1)*4
+        }
+        for (car_idx=i*4;car_idx< car_counter; car_idx++ ){
+          tmp_html_other_carousel += '<div class="car_container" style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+        }
+        tmp_html_other_carousel += '</div>';
+        carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';
+      }
+      carousel_img.innerHTML += tmp_html_other_carousel;
+    }
+
+    
+    vendor_title.innerHTML = datastr.vendor_title;
+    var j;
+    for (j=0; j<tech_advantage_len; j++) {
+      tech_advantage.innerHTML += datastr.tech_advantage[j] + '<br>';
+    };
+    var vendor_t_i_str = '<img src="data/' + datastr.vendor_tech_image + '" style="width: 100%;height: 798.4px;">';
+    vendor_tech_image.innerHTML = vendor_t_i_str;
+    vendor_equipment.innerHTML = datastr.vendor_equipment;
+    vendor_equipment_eng.innerHTML = datastr.vendor_equipment_eng;
+    tech_equipment_image.innerHTML = '<img src="data/' + datastr.tech_equipment_image + '" style="width: 100%;">';
+    var tech_application_arr = datastr.tech_application.split('&');
+    var k;
+    for (k=0; k<tech_application_arr.length; k++) {
+      tech_application.innerHTML += tech_application_arr[k] + '<br>'
+    }
+
+    var tech_intro_arr = datastr.tech_intro.split('&');
+    var z;
+    for (z=0; z<tech_intro_arr.length; z++) {
+      tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
+    }
+    
+    };
+  }
+var slideIndex = 1;
+function showSlides(n) {
+      var i;
+  
+      var slides = document.getElementsByClassName("mySlides");
+      console.log(slides.length);
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    };
+
+function plusSlides(n) {
+      showSlides(slideIndex += n);
+    };
+ function currentSlide(n) {
+      showSlides(slideIndex = n);
+    };
+    window.setInterval(function() {
+          document.querySelector('.next').click();
+        }, 2500);
+
 </script>
+
+  <script src="js/jsonData.js"></script>
 </body>
 </html>
 
