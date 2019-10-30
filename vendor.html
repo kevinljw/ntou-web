@@ -155,9 +155,16 @@ xhr.onload = function(){
     var carousel_first_slide = document.querySelector('.first-slide');
     var idx;
     var car_idx;
+    var tmp_car_len;
+
+    if (carousel_len > 4){
+    	tmp_car_len = 4;
+    }else{
+    	tmp_car_len = carousel_len
+    }
     
     carousel_first_slide.innerHTML = '<div class="row">'
-    for (car_idx=0; car_idx<carousel_len; car_idx++){
+    for (car_idx=0; car_idx<tmp_car_len; car_idx++){
     	carousel_first_slide.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     	}
     	carousel_first_slide.innerHTML += '</div>';
