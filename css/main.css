@@ -435,6 +435,7 @@ section {
   height: 40%;
   position: relative;
   top: 0;
+  text-align: center;
 }
 
 .prev-btn{
