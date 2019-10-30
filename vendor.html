@@ -156,33 +156,35 @@ xhr.onload = function(){
     var idx;
     var car_idx;
     var tmp_car_len;
-
+    var tmp_html_first_carousel;
+    var tmp_html_other_carousel;
+    
     if (carousel_len > 4){
     	tmp_car_len = 4;
     }else{
     	tmp_car_len = carousel_len
     }
-    console.log(carousel_first_slide.innerHTML);
-    carousel_first_slide.innerHTML += '<div class="row">'
-    console.log(carousel_first_slide.innerHTML);
+
+    tmp_html_first_carousel = '<div class="row">';
     for (car_idx=0; car_idx<tmp_car_len; car_idx++){
-    	carousel_first_slide.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
-    	console.log(carousel_first_slide.innerHTML);
+    	tmp_html_first_carousel += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     	}
-    carousel_first_slide.innerHTML += '</div>';
-    console.log(carousel_first_slide.innerHTML);
+    tmp_html_first_carousel += '</div>';
+    
+    carousel_first_slide.innerHTML = tmp_html_first_carousel;
     
     if (carousel_len > 4){
     	for (i=1; i< parseInt(carousel_len/4)+1;i++ ){
-    		carousel_img.innerHTML += '<div class="mySlides fade"><div class="row">';
+    		tmp_html_other_carousel += '<div class="mySlides fade"><div class="row">';
     		for (car_idx=i*4;car_idx< (i+1)*4; car_idx++ ){
-    			carousel_img.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    			tmp_html_other_carousel += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     		}
-    		carousel_img.innerHTML += '</div></div>';
+    		tmp_html_other_carousel += '</div></div>';
     		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';
     	}
     }
 
+    carousel_img.innerHTML = tmp_html_other_carousel;
     vendor_title.innerHTML = datastr.vendor_title;
     var j;
     for (j=0; j<tech_advantage_len; j++) {
