@@ -92,8 +92,8 @@
   
   	<div class="slide-show-row">
     <div class="slideshow-container">
-      <div class="img-container" id="img_c">
-        <div class="first-slide mySlides fade">
+      <div class="img-container">
+        <div class="first-slide mySlides fade" id="img_c">
         </div>
       </div>
       <div class="prev-next-btn">
@@ -177,7 +177,7 @@ xhr.onload = function(){
     if (carousel_len > 4){
     	tmp_html_other_carousel = '';
     	for (i=1; i< parseInt(carousel_len/4)+1;i++ ){
-    		tmp_html_other_carousel += '<div class="mySlides fade"><ul>';
+    		tmp_html_other_carousel += '<div class="mySlides fade" id="img_c"><ul>';
     		if ((i+1)*4 > carousel_len){
     			car_counter = carousel_len
     		}else{
