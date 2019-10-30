@@ -578,6 +578,7 @@ console.log(12345);
 function load_page(param) {
   document.getElementById("home-page").style.display='none';
   document.getElementById("vendor_page").style.display='block';
+  $('.vendor-page').addClass('animated slideInRight');
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + param + '.json',true);
