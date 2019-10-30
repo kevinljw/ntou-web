@@ -183,7 +183,7 @@ xhr.onload = function(){
     			car_counter = (i+1)*4
     		}
     		for (car_idx=i*4;car_idx< car_counter; car_idx++ ){
-    			tmp_html_other_carousel += '<div style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    			tmp_html_other_carousel += '<div style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:60%;"></div>';
     		}
     		tmp_html_other_carousel += '</div>';
     		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';

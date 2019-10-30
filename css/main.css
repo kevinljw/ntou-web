@@ -434,6 +434,7 @@ section {
   width: 80%;
   height: 40%;
   position: absolute;
+  top: 0;
 }
 
 .prev-next-btn{
