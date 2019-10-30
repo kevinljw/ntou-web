@@ -162,13 +162,16 @@ xhr.onload = function(){
     }else{
     	tmp_car_len = carousel_len
     }
-
+    console.log(carousel_first_slide.innerHTML);
     carousel_first_slide.innerHTML += '<div class="row">'
+    console.log(carousel_first_slide.innerHTML);
     for (car_idx=0; car_idx<tmp_car_len; car_idx++){
     	carousel_first_slide.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    	console.log(carousel_first_slide.innerHTML);
     	}
     carousel_first_slide.innerHTML += '</div>';
     console.log(carousel_first_slide.innerHTML);
+    
     if (carousel_len > 4){
     	for (i=1; i< parseInt(carousel_len/4)+1;i++ ){
     		carousel_img.innerHTML += '<div class="mySlides fade"><div class="row">';
