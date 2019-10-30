@@ -167,7 +167,7 @@ xhr.onload = function(){
 
     tmp_html_first_carousel = '';
     for (car_idx=0; car_idx<tmp_car_len; car_idx++){
-    	tmp_html_first_carousel += '<div style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    	tmp_html_first_carousel += '<div class="car_container" style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     	}
     
     carousel_first_slide.innerHTML = tmp_html_first_carousel;
@@ -183,7 +183,7 @@ xhr.onload = function(){
     			car_counter = (i+1)*4
     		}
     		for (car_idx=i*4;car_idx< car_counter; car_idx++ ){
-    			tmp_html_other_carousel += '<div style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:60%;"></div>';
+    			tmp_html_other_carousel += '<div class="car_container" style="float:left;"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     		}
     		tmp_html_other_carousel += '</div>';
     		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';
