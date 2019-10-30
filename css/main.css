@@ -435,6 +435,7 @@ section {
   height: 40%;
   position: relative;
   top: 0;
+  float: left;
 }
 
 .prev-next-btn{
@@ -739,5 +740,6 @@ section {
 
 .car_container{
   width: 20%;
-  height:auto;
+  height:20%;
+  padding: 5px;
 }
