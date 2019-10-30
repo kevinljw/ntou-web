@@ -742,7 +742,8 @@ section {
   float: left;
   width: 25%;
   border: 20px solid ;
+}
 
-ul li {
+#img_c ul li {
 　display:inline;
 }
