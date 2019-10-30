@@ -143,6 +143,7 @@ xhr.send();
 console.log(xhr.responseText)
 var carousel_len;
 xhr.onload = function(){
+	document.getElementById("vendor_page").classList.add('animated');
 	document.getElementById("vendor_page").classList.add('slideInRight');
     var datastr = JSON.parse(xhr.responseText);
     var vendor_title = document.querySelector('.vendor-title');
