@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="vendor-page" id="vendor_page">
+<div class="vendor-page animated" id="vendor_page">
 <div class="hero-image-detail">
 
   <div id="mySidenav" class="sidenav">
@@ -212,6 +212,7 @@ xhr.onload = function(){
       tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
     }
     showSlides(1);
+    document.getElementById("vendor_page").classList.remove('animated');
     };
 var slideIndex = 1;
 function showSlides(n) {
