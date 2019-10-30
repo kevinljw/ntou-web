@@ -431,10 +431,9 @@ section {
 }
 
 .img-container{
-  width: 20%;
-  height: 80%;
+  width: 80%;
+  height: 40%;
   position: absolute;
-  float: left;
 }
 
 .prev-next-btn{
@@ -735,13 +734,6 @@ section {
   top: 85%;
   left: 3.3%;
   color: #ffffff;
-}
-
-* {box-sizing: border-box;}
-.row .col {
-  float: left;
-  width: 25%;
-  border: 20px solid ;
 }
 
 #img_c ul li {
