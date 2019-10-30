@@ -4,7 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -578,8 +580,9 @@ console.log(12345);
 
 function load_page(param) {
   document.getElementById("home-page").style.display='none';
+  document.getElementById("vendor_page").classList.add("animated slideInRight");
   document.getElementById("vendor_page").style.display='block';
-  $('.vendor-page').addClass('animated slideInRight');
+  
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + param + '.json',true);
