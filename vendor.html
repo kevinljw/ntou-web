@@ -121,6 +121,13 @@
 <script src="js/jsonData.js"></script>
 
 <script>
+
+function sleep(n)
+  {
+    var start=new Date().getTime();
+    while(true) if(new Date().getTime()-start>n) break;
+
+  }
 function openNav() {
   document.getElementById("mySidenav").style.width = "21.4%";
 }
@@ -212,6 +219,7 @@ xhr.onload = function(){
       tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
     }
     showSlides(1);
+    sleep(3);
     document.getElementById("vendor_page").classList.remove('animated');
     };
 var slideIndex = 1;
