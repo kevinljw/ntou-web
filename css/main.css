@@ -441,13 +441,13 @@ section {
 .prev-btn{
   position: absolute;
   top: 210%;
-  left: 15%;
+  left: 10%;
 }
 
 .next-btn{
   position: absolute;
   top: 210%;
-  right: 15%;
+  right: 10%;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -747,7 +747,7 @@ section {
 }
 
 .car_container{
-  width: 378px;
-  height: auto;
+  width: 350px;
+  height: 200px;
   padding: 6px;
 }
