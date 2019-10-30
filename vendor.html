@@ -154,12 +154,25 @@ xhr.onload = function(){
     var carousel_dot = document.querySelector('.dot_here');
     var carousel_first_slide = document.querySelector('.first-slide');
     var idx;
-    carousel_first_slide.innerHTML = '<img src="data/' + datastr.carousel_image[0] + '" style="width:100%;">'
-
-    for (i=1; i<carousel_len; i++) {
-      carousel_img.innerHTML += '<div class="mySlides fade"><img src="data/' + datastr.carousel_image[i] + '" style="width:100%;"></div>';
-      carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
+    var car_idx;
+    
+    carousel_first_slide.innerHTML = '<div class="row">'
+    for (car_idx=0; car_idx<carousel_len; car_idx++){
+    	carousel_first_slide.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    	}
+    	carousel_first_slide.innerHTML += '</div>';
+    
+    if (carousel_len > 4){
+    	for (i=1; i< parseInt(carousel/4)+1;i++ ){
+    		carousel_img.innerHTML += '<div class="mySlides fade"><div class="row">';
+    		for (car_idx=i*4;car_idx< (i+1)*4; car_idx++ ){
+    			carousel_img.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    		}
+    		carousel_img.innerHTML += '</div></div>';
+    		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>'
+    	}
     }
+
     vendor_title.innerHTML = datastr.vendor_title;
     var j;
     for (j=0; j<tech_advantage_len; j++) {

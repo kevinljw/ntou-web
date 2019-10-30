@@ -737,3 +737,8 @@ section {
   color: #ffffff;
 }
 
+* {box-sizing: border-box;}
+.row .col {
+  float: left;
+  width: 25%;
+  border: 10px solid #fff;
