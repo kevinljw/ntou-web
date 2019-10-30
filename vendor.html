@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="vendor-page slideInRight">
+<div class="vendor-page animated">
 <div class="hero-image-detail">
 
   <div id="mySidenav" class="sidenav">
@@ -136,7 +136,7 @@ xhr.send();
 console.log(xhr.responseText)
 var carousel_len;
 xhr.onload = function(){
-
+	document.getElementById("vendor_page").classList.add('slideInRight');
     var datastr = JSON.parse(xhr.responseText);
     var vendor_title = document.querySelector('.vendor-title');
     var vendor_tech_image = document.querySelector('.vendor-tech-image');
