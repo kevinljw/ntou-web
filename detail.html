@@ -583,7 +583,7 @@ function load_page(param) {
   document.getElementById("vendor_page").classList.add('animated');
   document.getElementById("vendor_page").classList.add('slideInRight');
   document.getElementById("vendor_page").style.display='block';
-  document.getElementById("vendor_page").remove.add('animated');
+  document.getElementById("vendor_page").remove('animated');
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + param + '.json',true);
