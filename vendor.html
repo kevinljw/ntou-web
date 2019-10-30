@@ -165,22 +165,28 @@ xhr.onload = function(){
     	tmp_car_len = carousel_len
     }
 
-    tmp_html_first_carousel = '<div class="row">';
+    tmp_html_first_carousel = '<ul>';
     for (car_idx=0; car_idx<tmp_car_len; car_idx++){
-    	tmp_html_first_carousel += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    	tmp_html_first_carousel += '<li><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></li>';
     	}
-    tmp_html_first_carousel += '</div>';
+    tmp_html_first_carousel += '</ul>';
     
     carousel_first_slide.innerHTML = tmp_html_first_carousel;
     
+    var car_counter;
     if (carousel_len > 4){
     	tmp_html_other_carousel = '';
     	for (i=1; i< parseInt(carousel_len/4)+1;i++ ){
-    		tmp_html_other_carousel += '<div class="mySlides fade"><div class="row">';
-    		for (car_idx=i*4;car_idx< (i+1)*4; car_idx++ ){
-    			tmp_html_other_carousel += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
+    		tmp_html_other_carousel += '<div class="mySlides fade"><ul>';
+    		if ((i+1)*4 > carousel_len){
+    			car_counter = carousel_len
+    		}else{
+    			car_counter = (i+1)*4
     		}
-    		tmp_html_other_carousel += '</div></div>';
+    		for (car_idx=i*4;car_idx< car_counter; car_idx++ ){
+    			tmp_html_other_carousel += '<li><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></li>';
+    		}
+    		tmp_html_other_carousel += '</ul></div>';
     		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';
     	}
     	carousel_img.innerHTML += tmp_html_other_carousel;
