@@ -182,9 +182,10 @@ xhr.onload = function(){
     		tmp_html_other_carousel += '</div></div>';
     		carousel_dot.innerHTML += '<span class="dot" onclick="currentSlide(' + String(i+1) + ')"></span>';
     	}
+    	carousel_img.innerHTML += tmp_html_other_carousel;
     }
 
-    carousel_img.innerHTML = tmp_html_other_carousel;
+    
     vendor_title.innerHTML = datastr.vendor_title;
     var j;
     for (j=0; j<tech_advantage_len; j++) {
