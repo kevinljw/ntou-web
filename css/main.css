@@ -412,7 +412,7 @@ section {
 
 /* Slideshow container */
 .slide-show-row{
-  height: 55%;
+  /*height: 55%;*/
   display: -webkit-flex;
   display:         flex;
   -webkit-align-items: center;

@@ -166,7 +166,7 @@
           <div class="slideshow-container-index">
             <div class="mySlides1">
               <div class="content-image-left">
-                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-1.png" class="category-size" onClick="location.href='vendor.html?vendor=1-1'">
+                <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-1.png" class="category-size" onClick="load_page('1-1')">
               </div>
             <div class="content-image-right">
               <input type="image" name="submit_Btn" id="category" img src="data/logo-img/1-2.png" class="category-size" onClick="location.href='vendor.html?vendor=1-2'">
@@ -347,7 +347,7 @@
 </div>
 
 
-<div class="vendor-page slideInRight">
+<div class="vendor-page slideInRight" style="display: none;">
 <div class="hero-image-detail">
 
   <div id="mySidenav" class="sidenav">
@@ -578,7 +578,7 @@ console.log(12345);
 function load_page(param) {
   document.getElementById("home-page").style.display='none;';
   document.getElementById("vendor_page").style.display='block';
-  
+
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + param + '.json',true);
 console.log(xhr.responseText)
