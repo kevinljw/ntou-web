@@ -163,7 +163,7 @@ xhr.onload = function(){
     	tmp_car_len = carousel_len
     }
 
-    carousel_first_slide.innerHTML = '<div class="row">'
+    carousel_first_slide.innerHTML += '<div class="row">'
     for (car_idx=0; car_idx<tmp_car_len; car_idx++){
     	carousel_first_slide.innerHTML += '<div class="col"><img src="data/' + datastr.carousel_image[car_idx] + '" style="width:100%;"></div>';
     	}
