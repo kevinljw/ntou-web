@@ -583,7 +583,7 @@ function load_page(param) {
   document.getElementById("vendor_page").classList.add('animated');
   document.getElementById("vendor_page").classList.add('slideInRight');
   document.getElementById("vendor_page").style.display='block';
-  document.getElementById("vendor_page").remove('animated');
+  
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET','data/' + param + '.json',true);
@@ -667,7 +667,7 @@ xhr.onload = function(){
     for (z=0; z<tech_intro_arr.length; z++) {
       tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
     }
-    
+    document.getElementById("vendor_page").remove('animated');
     };
   }
 var slideIndex = 1;
