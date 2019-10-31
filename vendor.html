@@ -143,8 +143,7 @@ xhr.send();
 console.log(xhr.responseText)
 var carousel_len;
 xhr.onload = function(){
-	document.getElementById("vendor_page").classList.add('animated');
-	document.getElementById("vendor_page").classList.add('slideInRight');
+	
     var datastr = JSON.parse(xhr.responseText);
     var vendor_title = document.querySelector('.vendor-title');
     var vendor_tech_image = document.querySelector('.vendor-tech-image');
@@ -220,8 +219,9 @@ xhr.onload = function(){
       tech_intro.innerHTML += tech_intro_arr[z] + '<br>'
     }
     showSlides(1);
-    sleep(2500);
-    
+   
+    document.getElementById("vendor_page").classList.add('animated');
+	document.getElementById("vendor_page").classList.add('slideInRight');
     };
 var slideIndex = 1;
 function showSlides(n) {
@@ -250,7 +250,7 @@ function plusSlides(n) {
     };
     window.setInterval(function() {
           document.querySelector('.next').click();
-          
+
         }, 2500);
 
 </script>
