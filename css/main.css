@@ -561,8 +561,11 @@ div {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  
-  
+  }
+.dot_here{
+position: relative;
+top: 60px;
+
 }
 .modal-left-btn {
   display: none; /* Hidden by default */
