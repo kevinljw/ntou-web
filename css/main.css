@@ -773,7 +773,7 @@ top: 60px;
   text-align: left;
 }
 
-.ccle div {
+.ccle .ccle-subsection {
   display: inline-block; 
   vertical-align: top; 
   width: 130px;
