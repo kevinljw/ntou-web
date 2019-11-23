@@ -324,6 +324,15 @@ section {
   text-align: left;
   color: #ffffff;
 }
+
+.intro-vedio{
+  position: absolute;
+  left: 9.8%;
+  top: 85%;
+  width: 12.57%;
+  height: 8%;
+}
+
 .middle-image {
   width: 100%;
   height: 1065px;
@@ -756,3 +765,18 @@ top: 60px;
   height: 200px;
   padding: 6px;
 }
+
+.ccle {
+  position: relative;
+  top: 60%;
+  margin: 0px auto;
+  text-align: left;
+}
+
+.ccle div {
+  display: inline-block; 
+  vertical-align: top; 
+  width: 130px;
+  height: 50px;
+  border-radius:3px;margin: 2px;
+  }
