@@ -172,6 +172,18 @@
 <script src="js/jsonData.js"></script>
 
 <script>
+function modal_control(idx){
+  var modal = document.getElementsByClassName("modal-left-btn");
+  var btn = document.getElementsByClassName("btn");
+  var span = document.getElementsByClassName("modal-close-left");
+  btn[idx].onclick = function() {
+    modal[idx].style.display = "block";
+    console.log(idx);
+  };
+  span[idx].onclick = function() {
+    modal[idx].style.display = "none";
+  }
+}
 
 function sleep(n)
   {
@@ -330,18 +342,7 @@ function plusSlides(n) {
           document.querySelector('.next').click();
 
         }, 2500);
-function modal_control(idx){
-  var modal = document.getElementsByClassName("modal-left-btn");
-  var btn = document.getElementsByClassName("btn");
-  var span = document.getElementsByClassName("modal-close-left");
-  btn[idx].onclick = function() {
-    modal[idx].style.display = "block";
-    console.log(idx);
-  };
-  span[idx].onclick = function() {
-    modal[idx].style.display = "none";
-  }
-}
+
 
  
 </script>
