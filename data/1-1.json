@@ -8,5 +8,5 @@
  "tech_application": "1.水產養殖模組:包含魚苗、飼料、資材及益生菌、生產養殖規劃與製程、監測…等，皆可單獨販售也可模組輸出。&2.活菌營養劑:擁有多種菌屬，各包含菌株多種，透過共生培養技術，使產品之中所有菌株，皆能發揮其個別之最強功效。&3.優質水產品: 採用「室內外階段式循環水養殖系統」搭配餵食天然環境中篩選出的「益生菌」及「行政院農業委員會水產試驗所」專業的輔導，使得養殖的過程穩定安全且肉質更加鮮甜好吃。", 
  "carousel_image": ["1-1/image1.jpg","1-1/image2.jpg","1-1/image3.jpg","1-1/image4.jpg","1-1/image5.jpg","1-1/image6.jpg","1-1/image7.jpg","1-1/image8.jpg","1-1/image9.jpg","1-1/image10.jpg","1-1/image11.jpg"],
  "intro_video": {"button_name":"公司介紹","video_link":"https://www.youtube.com/embed/RMilfLdiHZ4"},
- "video_list": [{"button_name":"一","video_link":"https://www.youtube.com/embed/RMilfLdiHZ4"},{"button_name":"影片二","video_link":"https://www.youtube.com/embed/RMilfLdiHZ4"},{"button_name":"影片三","video_link":"https://www.youtube.com/embed/RMilfLdiHZ4"}]
+ "video_list": [{"button_name":"一","video_link":"https://www.youtube.com/embed/B3kAVugRwcc"},{"button_name":"影片二","video_link":"https://www.youtube.com/embed/2i3qg57fnxA"},{"button_name":"影片三","video_link":"https://www.youtube.com/embed/RMilfLdiHZ4"}]
 }
