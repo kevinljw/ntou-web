@@ -285,29 +285,7 @@ xhr.onload = function(){
     	carousel_img.innerHTML += tmp_html_other_carousel;
     }
 
-    //intro video
-    console.log(datastr.intro_video);
-    var intro_video_dct = datastr.intro_video;
-    console.log(intro_video_dct);
-    if (intro_video_dct != ''){
-      document.getElementById('ipt_btn0').style.display='block';
-      document.getElementById('btn0').src=intro_video_dct['video_link'];
-      document.getElementById('ipt_btn0').value=intro_video_dct['button_name'];
-    };
-
-    //video list
-    var video_list = datastr.video_list;
-    console.log(video_list);
-    var video_list_len = video_list.length;
-    var v;
-    var tmp_video_dct;
-    for (v=0; v<video_list_len; v++) {
-      console.log(video_list[v]);
-      tmp_video_dct = video_list[v];
-      document.getElementById('ipt_btn' + String(v+1)).style.display='block';
-      document.getElementById('ipt_btn' + String(v+1)).value = tmp_video_dct['button_name'];
-      document.getElementById('btn' + String(v+1)).src = tmp_video_dct['video_link'];
-    };
+    
 
 
     vendor_title.innerHTML = datastr.vendor_title;
@@ -335,6 +313,29 @@ xhr.onload = function(){
    
     //document.getElementById("vendor_page").classList.add('animated');
 	//document.getElementById("vendor_page").classList.add('slideInRight');
+    //intro video
+    console.log(datastr.intro_video);
+    var intro_video_dct = datastr.intro_video;
+    console.log(intro_video_dct);
+    if (intro_video_dct != ''){
+      document.getElementById('ipt_btn0').style.display='block';
+      document.getElementById('btn0').src=intro_video_dct['video_link'];
+      document.getElementById('ipt_btn0').value=intro_video_dct['button_name'];
+    };
+
+    //video list
+    var video_list = datastr.video_list;
+    console.log(video_list);
+    var video_list_len = video_list.length;
+    var v;
+    var tmp_video_dct;
+    for (v=0; v<video_list_len; v++) {
+      console.log(video_list[v]);
+      tmp_video_dct = video_list[v];
+      document.getElementById('ipt_btn' + String(v+1)).style.display='block';
+      document.getElementById('ipt_btn' + String(v+1)).value = tmp_video_dct['button_name'];
+      document.getElementById('btn' + String(v+1)).src = tmp_video_dct['video_link'];
+    };
     };
 var slideIndex = 1;
 function showSlides(n) {
