@@ -266,12 +266,12 @@ xhr.onload = function(){
     var video_list_len = video_list.length;
     var v;
     var tmp_video_dct;
-    for (v=1; v<video_list_len+1; v++) {
+    for (v=0; v<video_list_len; v++) {
       console.log(video_list[v]);
       tmp_video_dct = video_list[v];
-      document.getElementById('ipt_btn' + String(v)).style.display='block';
-      document.getElementById('ipt_btn' + String(v)).value = tmp_video_dct['button_name'];
-      document.getElementById('btn' + String(v)).src = tmp_video_dct['video_link'];
+      document.getElementById('ipt_btn' + String(v+1)).style.display='block';
+      document.getElementById('ipt_btn' + String(v+1)).value = tmp_video_dct['button_name'];
+      document.getElementById('btn' + String(v+1)).src = tmp_video_dct['video_link'];
     };
 
 
