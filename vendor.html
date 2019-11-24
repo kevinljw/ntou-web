@@ -54,6 +54,15 @@
   </div>
    
   <div class="intro-video">
+    <input type="button" id="ipt_btn0" onclick="modal_control(0)" value="" class="btn" style="display:none;width: 100%;height:100%;background-color: #11558c;border:2px blue none;font-size: 3vmin;color:white;font-family: sans-serif;">
+    <div id="myModal" class="modal-left-btn bounceIn">
+      <div class="modal-content-left">
+        <span class="modal-close-left">&times;</span>
+        <div class="resp-container" >
+          <iframe id="btn0" class="resp-iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        </div>
+      </div>
+    </div>
     
   </div> 
 </div>
@@ -73,7 +82,45 @@
     
     </div>
     <div class="ccle">
-      
+      <div class="ccle-subsection">
+        <input type="button" id="ipt_btn1" onclick="modal_control(1)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <div id="myModal" class="modal-left-btn bounceIn"> 
+          <div class="modal-content-left"> 
+            <span class="modal-close-left">&times;</span>
+            <div class="resp-container" >
+              <iframe id="btn1" class="resp-iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccle-subsection">
+        <input type="button" id="ipt_btn2" onclick="modal_control(2)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <div id="myModal" class="modal-left-btn bounceIn"> 
+          <div class="modal-content-left"> 
+            <span class="modal-close-left">&times;</span>
+            <div class="resp-container" >
+              <iframe id="btn2" class="resp-iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="ccle-subsection">
+        <input type="button" id="ipt_btn3" onclick="modal_control(3)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <div id="myModal" class="modal-left-btn bounceIn"> 
+          <div class="modal-content-left"> 
+            <span class="modal-close-left">&times;</span>
+            <div class="resp-container" >
+              <iframe id="btn3" class="resp-iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+
     </div>
   </div>
   <div style="clear:both;"></div>
@@ -208,15 +255,9 @@ xhr.onload = function(){
     var intro_video_dct = datastr.intro_video;
     console.log(intro_video_dct);
     if (intro_video_dct != ''){
-      intro_video.innerHTML = '<input type="button" onclick="modal_control(0)" value="' + intro_video_dct['button_name'] + '" class="btn" style="width: 100%;height: \ 100%;background-color: #11558c;border:2px blue none;font-size: 3vmin;color:white;font-family: sans-serif;"> \
-    <div id="myModal" class="modal-left-btn bounceIn"> \
-      <div class="modal-content-left"> \
-        <span class="modal-close-left">&times;</span> \
-        <div class="resp-container" > \
-          <iframe class="resp-iframe" src="' + intro_video_dct['video_link'] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> \
-        </div> \
-      </div> \
-    </div>';
+      document.getElementById('ipt_btn0').style.display='block';
+      document.getElementById('btn0').src=intro_video_dct['video_link'];
+      document.getElementById('ipt_btn0').value=intro_video_dct['button_name'];
     };
 
     //video list
@@ -225,10 +266,12 @@ xhr.onload = function(){
     var video_list_len = video_list.length;
     var v;
     var tmp_video_dct;
-    for (v=0; v<video_list_len; v++) {
+    for (v=1; v<video_list_len+1; v++) {
       console.log(video_list[v]);
       tmp_video_dct = video_list[v];
-      ccle.innerHTML += '<div class="ccle-subsection"><input type="button" onclick="modal_control('+ String(v+1) +')" value="' + tmp_video_dct['button_name'] + '" name="submit_Btn" class="btn" style="width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> <div id="myModal" class="modal-left-btn bounceIn"> <div class="modal-content-left"> <span class="modal-close-left">&times;</span><div class="resp-container" ><iframe class="resp-iframe" src="' + tmp_video_dct['video_link'] +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div></div>';
+      document.getElementById('ipt_btn' + String(v)).style.display='block';
+      document.getElementById('ipt_btn' + String(v)).value = tmp_video_dct['button_name'];
+      document.getElementById('btn' + String(v)).src = tmp_video_dct['video_link'];
     };
 
 
