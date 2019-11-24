@@ -172,10 +172,11 @@
 <script src="js/jsonData.js"></script>
 
 <script>
-function modal_control(idx){
   var modal = document.getElementsByClassName("modal-left-btn");
   var btn = document.getElementsByClassName("btn");
   var span = document.getElementsByClassName("modal-close-left");
+function modal_control(idx){
+  
   btn[idx].onclick = function() {
     modal[idx].style.display = "block";
     console.log(idx);
