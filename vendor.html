@@ -54,7 +54,7 @@
   </div>
    
   <div class="intro-video">
-    <input type="button" id="ipt_btn0" onclick="modal_control(0)" value="" class="btn" style="display:none;width: 100%;height:100%;background-color: #11558c;border:2px blue none;font-size: 3vmin;color:white;font-family: sans-serif;">
+    <input type="button" id="ipt_btn0"  value="" class="btn" style="display:none;width: 100%;height:100%;background-color: #11558c;border:2px blue none;font-size: 3vmin;color:white;font-family: sans-serif;">
     <div id="myModal" class="modal-left-btn bounceIn">
       <div class="modal-content-left">
         <span class="modal-close-left">&times;</span>
@@ -83,7 +83,7 @@
     </div>
     <div class="ccle">
       <div class="ccle-subsection">
-        <input type="button" id="ipt_btn1" onclick="modal_control(1)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <input type="button" id="ipt_btn1" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
         <div id="myModal" class="modal-left-btn bounceIn"> 
           <div class="modal-content-left"> 
             <span class="modal-close-left">&times;</span>
@@ -95,7 +95,7 @@
       </div>
 
       <div class="ccle-subsection">
-        <input type="button" id="ipt_btn2" onclick="modal_control(2)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <input type="button" id="ipt_btn2" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
         <div id="myModal" class="modal-left-btn bounceIn"> 
           <div class="modal-content-left"> 
             <span class="modal-close-left">&times;</span>
@@ -108,7 +108,7 @@
 
 
       <div class="ccle-subsection">
-        <input type="button" id="ipt_btn3" onclick="modal_control(3)" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
+        <input type="button" id="ipt_btn3" value="" name="submit_Btn" class="btn" style="display:none;width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> 
         <div id="myModal" class="modal-left-btn bounceIn"> 
           <div class="modal-content-left"> 
             <span class="modal-close-left">&times;</span>
@@ -175,16 +175,38 @@
   var modal = document.getElementsByClassName("modal-left-btn");
   var btn = document.getElementsByClassName("btn");
   var span = document.getElementsByClassName("modal-close-left");
-function modal_control(idx){
   
-  btn[idx].onclick = function() {
-    modal[idx].style.display = "block";
-    console.log(idx);
+  btn[0].onclick = function() {
+    modal[0].style.display = "block";
+    console.log(0);
   };
-  span[idx].onclick = function() {
-    modal[idx].style.display = "none";
+  span[0].onclick = function() {
+    modal[0].style.display = "none";
   }
-}
+
+  btn[1].onclick = function() {
+    modal[1].style.display = "block";
+    console.log(1);
+  };
+  span[1].onclick = function() {
+    modal[1].style.display = "none";
+  }
+
+  btn[2].onclick = function() {
+    modal[2].style.display = "block";
+    console.log(2);
+  };
+  span[2].onclick = function() {
+    modal[2].style.display = "none";
+  }
+
+  btn[3].onclick = function() {
+    modal[3].style.display = "block";
+    console.log(3);
+  };
+  span[3].onclick = function() {
+    modal[3].style.display = "none";
+  }
 
 function sleep(n)
   {
