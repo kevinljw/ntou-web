@@ -220,6 +220,8 @@ xhr.onload = function(){
     carousel_len  = datastr.carousel_image.length;
     var tech_advantage = document.querySelector('.tech-advantage');
     var tech_advantage_len = datastr.tech_advantage.length;
+    var intro_vedio = document.querySelector('.intro-vedio');
+    var ccle = document.querySelector('.ccle');
     var carousel_img = document.querySelector('.img-container');
     var carousel_dot = document.querySelector('.dot_here');
     var carousel_first_slide = document.querySelector('.first-slide');
@@ -261,7 +263,41 @@ xhr.onload = function(){
     	carousel_img.innerHTML += tmp_html_other_carousel;
     }
 
-    
+    //intro vedio
+    var intro_vedio_dct = datastr.intro_vedio;
+    if (intro_vedio_dct != ''){
+      intro_vedio.innerHTML = '<input type="button" value="' + intro_vedio_dct['button_name'] + '" class="btn" style="width: 100%;height: \ 100%;background-color: #11558c;border:2px blue none;font-size: 3vmin;color:white;font-family: sans-serif;"> \
+    <div id="myModal" class="modal-left-btn bounceIn"> \
+      <div class="modal-content-left"> \
+        <span class="modal-close-left">&times;</span> \
+        <div class="resp-container" > \
+          <iframe class="resp-iframe" src="' + intro_vedio_dct['vedio_link'] + '" frameborder="0" allow="accelerometer; \ autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> \
+        </div> \
+      </div> \
+    </div>';
+    }
+
+    //vedio list
+    var vedio_list = datastr.vedio_list;
+    var vedio_list_len = vedio_list.length;
+    var v;
+    var tmp_vedio_dct;
+    for (v=0; v<vedio_list_len; v++) {
+      tmp_vedio_dct = vedio_list[v];
+      ccle.innerHTML += '<div class="ccle-subsection"> \
+        <input type="button" value="' + tmp_vedio_dct['button_name'] + '" name="submit_Btn" class="btn" style="width:100%;height:100% \ ;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> \
+         <div id="myModal" class="modal-left-btn bounceIn"> \
+      <div class="modal-content-left"> \ 
+        <span class="modal-close-left">&times;</span> \
+        <div class="resp-container" > \
+          <iframe class="resp-iframe" src="' + tmp_vedio_dct['vedio_link'] +'" frameborder="0" allow="accelerometer; \ autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> \
+        </div> \
+      </div> \
+    </div>\
+      </div>';
+    };
+
+
     vendor_title.innerHTML = datastr.vendor_title;
     var j;
     for (j=0; j<tech_advantage_len; j++) {
