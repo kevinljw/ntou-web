@@ -225,7 +225,7 @@ xhr.onload = function(){
     var v;
     var tmp_video_dct;
     for (v=0; v<video_list_len; v++) {
-      tmp_vedio_dct = video_list[v];
+      tmp_vidio_dct = video_list[v];
       ccle.innerHTML += '<div class="ccle-subsection"><input type="button" value="' + tmp_video_dct['button_name'] + '" name="submit_Btn" class="btn" style="width:100%;height:100%;background-color:#34b9fc;border:2px blue none;font-size: 3vmin;color:white; font-family: sans-serif;"> <div id="myModal" class="modal-left-btn bounceIn"> <div class="modal-content-left"> <span class="modal-close-left">&times;</span><div class="resp-container" ><iframe class="resp-iframe" src="' + tmp_video_dct['video_link'] +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div></div>';
     };
 
@@ -288,7 +288,7 @@ function plusSlides(n) {
 var modal = document.getElementsByClassName("modal-left-btn");
 var btn = document.getElementsByClassName("btn");
 var span = document.getElementsByClassName("modal-close-left");
-
+  if (typeof btn !== 'undefined') {
   btn[0].onclick = function() {
     modal[0].style.display = "block";
     console.log(0);
@@ -320,6 +320,8 @@ var span = document.getElementsByClassName("modal-close-left");
   span[3].onclick = function() {
     modal[3].style.display = "none";
   }
+
+}
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
