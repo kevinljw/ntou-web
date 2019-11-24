@@ -317,7 +317,7 @@ xhr.onload = function(){
     console.log(datastr.intro_video);
     var intro_video_dct = datastr.intro_video;
     console.log(intro_video_dct);
-    if (intro_video_dct != ''){
+    if (intro_video_dct !== 'undefined'){
       document.getElementById('ipt_btn0').style.display='block';
       document.getElementById('btn0').src=intro_video_dct['video_link'];
       document.getElementById('ipt_btn0').value=intro_video_dct['button_name'];
