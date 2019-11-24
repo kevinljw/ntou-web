@@ -318,9 +318,10 @@ xhr.onload = function(){
     var intro_video_dct = datastr.intro_video;
     console.log(intro_video_dct);
     if (intro_video_dct !== 'undefined'){
-      document.getElementById('ipt_btn0').style.display='block';
+      
       document.getElementById('btn0').src=intro_video_dct['video_link'];
       document.getElementById('ipt_btn0').value=intro_video_dct['button_name'];
+      document.getElementById('ipt_btn0').style.display='block';
     };
 
     //video list
@@ -332,9 +333,9 @@ xhr.onload = function(){
     for (v=0; v<video_list_len; v++) {
       console.log(video_list[v]);
       tmp_video_dct = video_list[v];
-      document.getElementById('ipt_btn' + String(v+1)).style.display='block';
       document.getElementById('ipt_btn' + String(v+1)).value = tmp_video_dct['button_name'];
       document.getElementById('btn' + String(v+1)).src = tmp_video_dct['video_link'];
+      document.getElementById('ipt_btn' + String(v+1)).style.display='block';
     };
     };
 var slideIndex = 1;
